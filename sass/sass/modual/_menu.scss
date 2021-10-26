@@ -86,9 +86,12 @@
                 right:-.7em;
                 color:#fff;
                 text-shadow: 1px 2px 6px rgba(0, 0, 0, .6);
+                @include screen('mobile') {
+                    display: none;
+                }
             }
             &:last-child{
-             &:before{
+               &:before{
                 display: none;
             }
         }
@@ -207,7 +210,7 @@ ul {
             color: #FFF;
             width: 100%;
             height: 3em;
-            background: $primaryColor;
+            background: #0070ce;
             padding: 0 1em;
             line-height: 3em;
             box-sizing: border-box;
@@ -229,7 +232,7 @@ ul {
             width: 100%;
             @include box-shadow(0px 0px 4px RGBA(0, 0, 0, .4));
             margin-bottom: 1em;
-            background: #CCC;
+            background: #20184b;
             a {
                 display: block;
                 color: #222;
@@ -246,14 +249,16 @@ ul {
                         padding: .5em 1em;
                         min-height: 2em;
                         line-height: 2em;
-                        background: #FFF;
-                        border-bottom: 1px solid #CCC;
+                        background: #20184b;
+                        border-bottom: 1px solid #c5d7ff;
+                        color:#fff;
                     }
                     &.hasChild {
                         >a {
                             padding: .5em 1em;
                             color: #222;
-                            background: #FFF;
+                            background: #20184b;
+                            color:#fff;
                             padding-right: 36px;
                             position: relative;
                             &:after {
@@ -269,6 +274,7 @@ ul {
                                 border-top: none;
                                 border-left: none;
                                 transition: .3s;
+                                color:#fff;
                             }
                         }
                     }
@@ -284,11 +290,11 @@ ul {
                                 min-height: 1.5em;
                                 line-height: 1.5em;
                                 padding: .5em 1em .5em 2em !important;
-                                background: #eee;
+                                background: #000;
                                 &:hover,
                                 &:focus {
-                                    color: #000;
-                                    background: #ccc;
+                                    color: #c5d7ff;
+                                    background: #333;
                                 }
                             }
                             &.hasChild {

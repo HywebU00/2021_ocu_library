@@ -188,7 +188,10 @@ body {
                     background-size: 130px auto;  
                 }
                 h3{
-                    background: $lightColor;    
+                    background: $lightColor;
+                    @include screen('mobile') {
+                        margin-top: 2em;   
+                    }
                 }
             }
             &:nth-child(3){
@@ -199,7 +202,10 @@ body {
                     background-size: 130px auto;  
                 }
                 h3{
-                    background: $importantColor;    
+                    background: $importantColor;
+                    @include screen('mobile') {
+                        margin-top: 2em;   
+                    }    
                 }
             }
         }
@@ -654,6 +660,9 @@ body {
     background: rgba(0, 0, 0, .6);
     border-radius: 8px;
     color:#fff;
+    @include screen('mobile') {
+        margin: 1em 0;
+    }
     .tabs {
         position: relative;
         &>.tabItem {
@@ -696,13 +705,17 @@ body {
                 box-shadow: none;
             }
             @include screen('mobile') {
-                float: none;
+                float: none!important;
                 width: 100% !important;
                 border-bottom: 1px solid #888;
                 &.active {
                     border-color: #bbb;
                 }
             }
+        }
+        @include screen('mobile') {
+            margin: 0 ;
+            padding: 0 1em;
         }
     }
     .tabContent {
@@ -729,7 +742,8 @@ body {
             font-size: .938em;
             border-bottom: none;
             @include screen('mobile') {
-                @include text-overflow();
+                // 
+                white-space:normal;
             }
             a {
                 @include aSetting_nocolor;
@@ -1467,37 +1481,51 @@ body {
 //manual
 .manual{
     .container{
-       position: relative;
-       height: 180px;
-       overflow: hidden;
-       background: url('../images/manual_bg.jpg')no-repeat left top;
-       background-size: cover;
-   }
+     position: relative;
+     height: 180px;
+     overflow: hidden;
+     background: url('../images/manual_bg.jpg')no-repeat left top;
+     background-size: cover;
+ }
 
-   .booktext {
-      position: absolute;
-      width: 450px;
-      background: url('../images/manual_bookbg.png')no-repeat left top;
-      width: 392px;
-      height: 278px;
-      left: 35px;
-      top:5px;
-      animation: circle-move 2.4s ease-in-out infinite;
-  }
+ .booktext {
+  position: absolute;
+  width: 450px;
+  background: url('../images/manual_bookbg.png')no-repeat left top;
+  width: 392px;
+  height: 278px;
+  left: 35px;
+  top:5px;
+  animation: circle-move 2.4s ease-in-out infinite;
 
-  .word {
-      position: absolute;
-      opacity: 0;
-      left:57px;
-      top:90px;
-      font-size: 1.8em;
-      color:#341700;
+  @include screen('xs_mobile') {
+    background-size: 100% auto;
+    width: 300px;
+    left: 20px;
+}
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+  left:57px;
+  top:90px;
+  font-size: 1.8em;
+  color:#341700;
+  @include screen('xs_mobile') {
+      left:37px;
+      top:85px;
+      font-size: 1.5em;
   }
-  .word1{
+}
+.word1{
     color:#341700;
     position: absolute;
     left:57px;
     top:55px;
+    @include screen('xs_mobile') {
+      left:37px;  
+  }
 }
 .word2{
     color:#7b4212;
@@ -1512,7 +1540,14 @@ body {
         position: absolute;
         top:.75em;
         left:10.5em;
-    }
+        @include screen('xs_mobile') {
+          width: 2.8em;  
+      }
+  }
+  @include screen('xs_mobile') {
+      left:37px;
+      top:115px;  
+  }
 }
 
 .letter {
