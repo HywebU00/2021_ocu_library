@@ -4,11 +4,11 @@
     z-index: 99;
     // background: #FFF;
     // box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
-    background: rgb(37,31,79);
-    background: -moz-linear-gradient(180deg, rgba(37,31,79,1) 25%, rgba(255,255,255,0) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(37,31,79,1) 25%, rgba(255,255,255,0) 100%);
-    background: linear-gradient(180deg, rgba(37,31,79,1) 25%, rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#251f4f",endColorstr="#ffffff",GradientType=1);
+    background: rgb(32,24,75);
+    background: -moz-linear-gradient(0deg, rgba(32,24,75,0) 0%, rgba(32,24,75,1) 60%, rgba(32,24,75,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(32,24,75,0) 0%, rgba(32,24,75,1) 60%, rgba(32,24,75,1) 100%);
+    background: linear-gradient(0deg, rgba(32,24,75,0) 0%, rgba(32,24,75,1) 60%, rgba(32,24,75,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20184b",endColorstr="#20184b",GradientType=1);
     @extend %clearfix;
 
     @include screen('mobile') {
