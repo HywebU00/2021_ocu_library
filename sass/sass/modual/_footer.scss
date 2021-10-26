@@ -62,6 +62,7 @@ footer {
         ul{
             display: flex;
             justify-content: flex-end;
+            align-items:center;
             @include li-reset;
             @include screen('xs_mobile') {
                 justify-content: flex-start;
