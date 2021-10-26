@@ -1,0 +1,450 @@
+.lp {
+    table {
+        td {
+            a {
+                @include aSetting_nocolor;
+            }
+
+            &.date {
+                text-align: center;
+                color: #666;
+
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+
+            &.num {
+                text-align: center;
+                color: #666;
+
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .list {
+
+        &>ul,
+        ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 2px solid $primaryColor;
+
+            &>li {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1em 0;
+                border-bottom: 1px solid #DDD;
+                position: relative; // outline: 1px solid blue;
+
+                .tag {
+                    margin-left: 2em;
+                }
+
+                &>a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    color: $color-word;
+
+                    &:hover {
+                        color: $aHover;
+                    }
+
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+
+                time {
+                    display: block;
+                    color: #AAA;
+                    font-size: .938em;
+                }
+            }
+        }
+
+        .list_picture {
+            flex-basis: calc(33.33333% - 15px);
+            margin-right: 15px;
+
+            @include screen("mobile") {
+                flex-basis: 100%;
+                margin-right: 0;
+            }
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .list_text {
+            flex-basis: 66.66666%;
+
+            @include screen("mobile") {
+                flex-basis: 100%;
+            }
+
+            time {
+                position: static;
+                padding-left: 0;
+            }
+
+            .dept {
+                margin: 0;
+            }
+
+            .brief {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+                max-height: 5.75em;
+            }
+        }
+
+        .list_title {
+            a {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                max-height: 3.125em;
+                color: $color-word;
+                font-weight: bold;
+
+                @include screen("mobile") {
+                    display: block;
+                    max-height: 100%;
+                }
+
+                &:hover {
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}
+
+//圖文列表頁(書本)
+.books_list {
+    margin-top: 2em;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        @include li-reset;
+    }
+
+    li {
+        flex-basis: 25%;
+        @include gutter();
+
+        @include screen("tablet") {
+            flex-basis: 33.33333%;
+        }
+
+        @include screen("mobile") {
+            flex-basis: 50%;
+        }
+
+        padding-bottom: 30px;
+
+        a {
+            box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);
+            background: #FFF;
+        }
+    }
+
+    @media screen and (max-width: 468px) {
+        li {
+            width: 100%;
+        }
+    }
+
+    .thumbnail {
+        &:hover {
+            .img-container {
+                img {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .img-container {
+            background: #fff;
+            @include aspect-ratio(1, 1);
+        }
+    }
+
+    .caption {
+        height: 140px;
+
+        p {
+            margin: .5em 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+    }
+}
+
+//圖片列表頁
+.album {
+    margin: 1em auto;
+
+    >ul {
+        @include li-reset;
+        display: flex;
+        flex-wrap: wrap;
+
+        >li {
+            flex-basis: 33.33333%;
+            overflow: visible;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include screen("tablet") {
+                flex-basis: 50%;
+            }
+
+            @include screen("xs_mobile") {
+                flex-basis: 100%;
+            }
+
+            a {
+                &:hover {
+                    .img-container {
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .thumbnail {
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto 1em;
+
+            @include screen("xs_mobile") {
+                max-width: 100%;
+            }
+
+            .img-container {
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 50px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+                }
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .caption {
+                width: 90%;
+                margin: 0 auto;
+                padding-bottom: 1em;
+                position: relative;
+
+                time {
+                    font-size: .938em;
+                    color: lighten($color-word, 20);
+                }
+
+                .picture_detial {
+                    color: #fff;
+                    position: absolute;
+                    top: -38px;
+                    left: 0;
+                    width: 100%;
+                    font-size: .938em;
+
+                    ul {
+                        @include li-reset;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    li {
+                        margin-right: 1em;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        i {
+                            margin-right: .5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//活動列表頁
+.activities_list {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        @include li-reset;
+
+        li {
+            flex-basis: 50%;
+            max-width: 50%;
+            margin: 0 0 1em 0;
+            @include gutter();
+            @include screen("mobile"){
+                flex-basis: 100%;
+                max-width: 100%;
+                @include gutter(0);
+            }
+        }
+    }
+
+    .thumbnail {
+        position: relative;
+        width: 100%;
+
+        &:hover {
+            img {
+                transform: scale(1);
+            }
+        }
+
+        .library_tag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: .5em 1em;
+            color: #fff;
+            background: $secondaryColor;
+        }
+
+        .img-container {
+            @include aspect-ratio(2, 1);
+            background: #000;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .caption {
+            width: 100%;
+            overflow: hidden;
+            padding: .5em 120px 1em 1em;
+
+            @include screen("mobile") {
+                padding: .5em 1em 1em;
+            }
+
+            h2,
+            h3,
+            h4 {
+                margin-bottom: .5em;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .time {
+                word-wrap: word-break;
+                font-size: .938em;
+
+                time {
+                    font-size: 1em;
+                    padding-right: .2em;
+                    display: inline-block;
+                }
+
+                span {
+                    @include screen("xs_mobile") {
+                        display: block;
+                    }
+                }
+            }
+
+            ul {
+                @include screen("mobile") {
+                    padding-right: 120px;
+                }
+
+                li {
+                    width: 100%;
+                    padding: 0;
+                    float: none;
+                    margin: 0;
+                }
+            }
+
+            .status {
+                position: absolute;
+                width: 100px;
+                height: 80px;
+                right: 1em;
+                bottom: 1em;
+                background: #f1f1f1;
+                padding: .5em;
+                color: $color-word;
+                text-align: center;
+
+                &.register {
+                    color: $primaryColor;
+                }
+
+                &.full {
+                    color: lighten($color-word, 10);
+                }
+
+                span {
+                    display: block;
+                    padding: .2em;
+                    font-size: .938em;
+                }
+
+                .people {
+                    font-size: 1.125em;
+                    font-weight: bold;
+                    font-family: Georgia;
+                }
+            }
+        }
+    }
+}

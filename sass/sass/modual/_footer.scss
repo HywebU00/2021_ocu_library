@@ -1,0 +1,183 @@
+footer {
+    @include box-sizing(border-box);
+    @include clearfix;
+    text-align: left;
+    padding: 150px 0 0 0;
+    margin-top: -150px;
+    background: rgba(32,24,75,1);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(32,24,75,1) 60%, rgba(32,24,75,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(32,24,75,1) 60%, rgba(32,24,75,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(32,24,75,1) 60%, rgba(32,24,75,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#20184b",GradientType=1);
+
+    // background: #fff;
+    .container {
+        @include gutter;
+        // >div {
+        //     padding-bottom: 1em;
+        // }
+    }
+    .accesskey{
+        color:#20184b;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+    .footer_logo {
+        @include make-xs-column(8);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        @include gutter();
+    }
+    .footer_info {
+        padding: 10px 20px;
+        margin: 0;
+        opacity:.9;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        // flex-wrap: wrap;
+        @include screen('mobile'){
+            flex-wrap: wrap;
+        }
+        .Copyright{
+            flex-basis: 70%;
+            @include screen('xs_mobile'){
+                flex-basis: 100%;
+            }
+        }
+    }
+    .footer_icon {
+        flex-basis: 30%;
+        align-self: center;
+        @include screen('xs_mobile'){
+            flex-basis: 100%;
+        }
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            @include li-reset;
+            @include screen('xs_mobile') {
+                justify-content: flex-start;
+            }
+
+
+        }
+        li{
+            margin-right: .5em;
+            a{
+                display: block;
+                img{
+                    max-width: 50%;
+                    max-width: 203px;
+                }
+            }
+
+        }
+        @include screen('mobile') {
+            ul{
+                display: block;
+                text-align: center;
+                li{
+                    width:80%;
+                    margin: 5px auto;
+                }
+            }
+        }
+    }
+    .footer_bottom{
+        background: #fff;
+        border-top: 1px solid #000;
+        font-size: .813em;
+        padding: 10px 20px;
+        overflow: hidden;
+        .copyright{
+            float: right;
+            padding:.5em 0;
+            @include screen('mobile') {
+                padding-left: 0;
+                margin: 0;
+            }
+        }
+    }
+    // 版權連結
+    .footer_link {
+        @include li-reset();
+        @include clearfix();
+        margin:.5em auto;
+        float: left;
+        li {
+            float: left;
+            display: block;
+            margin: 0px 20px 0 0;
+            @include screen('mobile') {
+                margin-left: 0;
+            }
+            a {
+                display: block;
+                padding: .5em 0;
+                background: none;
+                color: #000;
+                border-radius:4px;
+
+                @include transition(all, .3s, ease-out);
+                &:hover,
+                &:focus {
+                    color:$color-word;
+                }
+            }
+        }
+    }
+    p {
+        font-size: 0.837em;
+        line-height: 1.65em;
+        color:#89aecd;
+    }
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
+        em {
+            font-style: normal;
+            color: #89aecd;
+            padding: 0 .5em;
+        }
+    }
+    .footer_icon {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position:relative;
+            &:focus {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    z-index: 99;
+                }
+            }
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+
+}
+
+.timeinfo{
+    font-size: 1.125em;
+    color:#fff;
+    margin-bottom: 0;
+    display: block;
+    line-height: 1em;
+}
