@@ -1667,10 +1667,16 @@ body {
         border: solid 1px #c5d7ff;
         min-width: 200px;
         &:after{
-            right: 1.8em;
+            right: 2em;
         }
         &:hover{
             border: solid 1px #fff;    
+        }
+        @include screen('mobile') {
+            min-width: 220px;
+            &:after{
+                right: 1.8em;
+            }
         }
     }
 }
