@@ -1662,9 +1662,10 @@ body {
 .more{
     justify-content:center;
     a{
-        padding: .3em 5em .3em 4em;
+        padding: .3em 1.5em .3em 1em;
         border-radius: 30px;
         border: solid 1px #c5d7ff;
+        min-width: 200px;
         &:after{
             right: 2em;
         }
