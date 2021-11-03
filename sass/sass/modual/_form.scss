@@ -59,10 +59,10 @@ select::-ms-expand {
 }
 
 .form_grid {
-    border-top: 1px solid #DDD;
+    // border-top: 1px solid #DDD;
 
     .form_grp {
-        border-bottom: 1px dashed #DDD;
+        border-bottom: 1px solid #606060;
         padding: .5em 0;
     }
 }
@@ -70,6 +70,7 @@ select::-ms-expand {
 .flex-form {
     font-size: .938em;
     margin: .5em;
+    color:#fff;
 
     .form_grp {
         display: flex;
@@ -1508,5 +1509,9 @@ abbr[title] {
 
 .search_grp {
     padding: 1em;
+    background: rgba(0, 0, 0, .5);
+    color:#fff;
+    border-radius: 8px;
+    margin-bottom: 2em;
 
 }

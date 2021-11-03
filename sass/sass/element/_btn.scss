@@ -102,11 +102,15 @@ $btn-radius:.2em;
 }
 .btn-submit {
     // @extend %btn;
-    @include btn_setting(lighten($primaryColor, 5), #FFF);
+    @include btn_setting(lighten($importantColor, 5), #FFF);
 }
 .btn-reset {
     // @extend %btn;
     color:lighten($color-word,15);
+    &:hover{
+        background: $aHover;
+        border: 1px solid darken($aHover, 5);
+    }
 }
 .btn-search {
     // @extend %btn;
@@ -114,14 +118,14 @@ $btn-radius:.2em;
 }
 // 主要按鈕
 .btn-primary{
-    background: $primaryColor!important;
+    background: $importantColor!important;
     color: #fff !important;
-    border: solid 1px $primaryColor!important;
+    border: solid 1px $importantColor!important;
 
     &:hover,
     &:focus {
-        background: darken($primaryColor, 10)!important;
-        border: solid 1px $primaryColor!important;
+        background: darken($importantColor, 10)!important;
+        border: solid 1px $importantColor!important;
 
     }
 }

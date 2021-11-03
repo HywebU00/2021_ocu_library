@@ -4,12 +4,13 @@
     display: block;
     text-align: center;
     font-size: .938em;
+    color:#fff;
     @extend %clearfix; // outline: 1px solid red;
     .form_inline{
         justify-content: center;
     }
     span {
-        color: $primaryColor;
+        color: #c5d7ff;
         margin: 0px .5em;
     }
     .page {
@@ -161,6 +162,21 @@
             text-decoration: none;
         }
     }
+    .prev{
+        a{
+            display: inline-block;
+            background: url('../images/icon_prev.png')no-repeat left center;
+            padding-left: 18px;
+        }
+    }
+    .next{
+        a{
+            display: inline-block;
+            background: url('../images/icon_next.png')no-repeat right center;
+            padding-right: 18px;
+        }
+    }
+
 }
 @include screen('mobile') {
     .pagination .total select.form-control {

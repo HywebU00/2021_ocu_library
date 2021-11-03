@@ -74,56 +74,112 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
+    margin-top: 15px;
+    @include screen('mobile') {
+        margin: 80px 15px 0;
+    }
     >.container {
         @include gutter(); //gutter 代表左右要留白
+        // display: flex;
+        // padding-top: 1em;
+        background: rgba(0, 0, 0, .6);
+        border-radius: 8px;
+        padding: 0 50px 20px;
+        @include screen('mobile') {
+           padding: 15px; 
+       }
+
+   }
+   .top_block {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+}
+.col2block{
+    display: flex;
+    margin-top: 20px;
+    @include screen('mobile') {
+        padding: 0px 0px; 
         display: flex;
-        padding-top: 1em;
+        flex-wrap:wrap; 
+    }
+}
+
+.center_block {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.left_block {
+    flex: none;
+    flex-basis: 240px;
+    max-width: 240px;
+    margin-right: 40px;
+
+    &.hidden {
+        +.center_block {
+            flex: none;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
     }
 
-    .center_block {
-        flex: none;
+    +.center_block {
+        flex: auto;
+        flex-basis: calc(100% - 260px);
+        max-width: calc(100% - 260px);
+    }
+
+    @include screen('mobile') {
         flex-basis: 100%;
         max-width: 100%;
-    }
-
-    .left_block {
-        flex: none;
-        flex-basis: 260px;
-        max-width: 260px;
-        margin-right: 40px;
-
-        &.hidden {
-            +.center_block {
-                flex: none;
-                flex-basis: 100%;
-                max-width: 100%;
-            }
-        }
+        margin-right: 0;
+        margin-bottom: 30px;
 
         +.center_block {
-            flex: auto;
-            flex-basis: calc(100% - 300px);
-            max-width: calc(100% - 300px);
-        }
-
-        @include screen('tablet') {
-            display: none;
-
-            +.center_block {
-                flex: none;
-                flex-basis: 100%;
-                max-width: 100%;
-            }
+            flex: none;
+            flex-basis: 100%;
+            max-width: 100%;
         }
     }
-
-    &.small_size {
-        font-size: .938em;
-    }
-
-    &.large_size {
+    h2{
+        background: #005fab;
+        color:#fff;
+        padding: .5em .1em;
+        margin:0 0 10px 0;
+        text-align: center;
         font-size: 1.125em;
+        border-radius: 3px;
     }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            padding: 0;
+            margin: 0;
+            background: url('../images/left_block_libg.png')repeat-x left bottom;
+            a{
+                display: block;
+                padding: .6em 20px .6em .6em;
+                background: url('../images/left_block_arrow.png')no-repeat right 15px center;
+                &:hover, &:focus{
+                  background: url('../images/left_block_arrow_ov.png')no-repeat right 15px center;  
+              }
+          }
+      }
+  }
+}
+
+&.small_size {
+    font-size: .938em;
+}
+
+&.large_size {
+    font-size: 1.125em;
+}
 }
 
 .hidden {
@@ -1409,31 +1465,43 @@ body {
 //活動申請表單
 .apply_form {
     margin: 0 auto;
-
+    text-align: left;
     @include screen('mobile') {
         width: 100%;
     }
+    h3, h4{
+        color:#fff;
+        margin:.2em 0;
+    }
+    p{
+      color:#fff;
+      font-weight: normal;
+      margin:0; 
+      font-size: .875em;
+  }
+  input {
+    border: 1px solid #ccc;
+    background: #fff;
+}
 
-    input {
-        border: 1px solid #ccc;
-        background: #fff;
+select {
+    width: auto;
+    min-width: 100px;
+}
+.form_grid{
+    .btn_grp{
+        margin: 1em 0;
     }
-
-    select {
-        width: auto;
-        min-width: 100px;
-    }
-    .form_grid{
-        .btn_grp{
-            margin: 1em 0;
-        }
-    }
+}
 }
 
 .apply_result {
     margin-bottom: 2em;
     td {
         text-align: center;
+        @include screen('mobile') {
+            text-align: left;
+        }
     }
 
     .name {
@@ -1446,6 +1514,7 @@ body {
     clear: both;
     //border:1px solid $color-gray;
     padding: .5em 2em;
+    background: rgba(0, 0, 0, .5);
 
     ul {
         list-style: none;
@@ -1470,7 +1539,7 @@ body {
 
     .result_content {
         display: inline-block;
-        color: darken($primaryColor, 10);
+        color: #fff;
 
         @include screen('xs_mobile') {
             display: block;
@@ -1481,28 +1550,28 @@ body {
 //manual
 .manual{
     .container{
-     position: relative;
-     height: 180px;
-     overflow: hidden;
-     background: url('../images/manual_bg.jpg')no-repeat left top;
-     background-size: cover;
- }
+       position: relative;
+       height: 180px;
+       overflow: hidden;
+       background: url('../images/manual_bg.jpg')no-repeat left top;
+       background-size: cover;
+   }
 
- .booktext {
-  position: absolute;
-  width: 450px;
-  background: url('../images/manual_bookbg.png')no-repeat left top;
-  width: 392px;
-  height: 278px;
-  left: 35px;
-  top:5px;
-  animation: circle-move 2.4s ease-in-out infinite;
+   .booktext {
+      position: absolute;
+      width: 450px;
+      background: url('../images/manual_bookbg.png')no-repeat left top;
+      width: 392px;
+      height: 278px;
+      left: 35px;
+      top:5px;
+      animation: circle-move 2.4s ease-in-out infinite;
 
-  @include screen('xs_mobile') {
-    background-size: 100% auto;
-    width: 300px;
-    left: 20px;
-}
+      @include screen('xs_mobile') {
+        background-size: 100% auto;
+        width: 300px;
+        left: 20px;
+    }
 }
 
 .word {
@@ -1681,4 +1750,130 @@ body {
     }
 }
 }
+
+.aCenter {
+    text-align: center;
+}
+
+//資訊列表
+.charts {
+    padding:2em 0;
+    .chart_container{
+        margin:2em 0;
+        padding:1em .5em;
+        border:1px solid $color-gray;
+        background:#fff;
+        .highcharts-credits{
+            display:none;
+        }
+    }
+}
+.chart_grp{
+    margin-bottom: 2em;
+    border-bottom: 1px solid #DDD;
+    .chart_container{
+        max-width:1100px;
+        min-width: 310px;
+        height:400px;
+        margin:0 auto;
+    }
+}
+//即時資訊
+.instant_info{
+    @include screen('mobile') {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        list-style: none;
+        @include screen('tablet') {
+            padding-left: 0;
+            margin:0;
+        }
+    }
+    li{
+        padding:.55em 110px .55em 0;
+        position: relative;
+        @include screen('tablet') {
+            padding-right: 80px;
+        }
+        &:after{
+            content:"";
+            position: absolute;
+            right:0;
+            top:50%;
+            margin-top: -40px;
+            display:inline-block;
+            width: 80px;
+            height:80px;
+            @include screen('tablet') {
+                width: 60px;
+                height:60px;
+                margin-top: -30px;
+            }
+        }
+        .amount{
+            font-size:2.5em;
+            color:$primaryColor;
+            font-family: 'Century Gothic';
+            font-weight: bold;
+            font-style:italic;
+            display:block;
+            text-align: right;
+            padding:.3em 0;
+            letter-spacing: -1px;
+        }
+        .unit{
+            color:$primaryColor;
+            display:inline-block;
+            padding: 0 .5em;
+
+        }
+        .text{
+            display:block;
+            text-align: right;
+        }
+        &.readers_card{
+            &:after{
+                content:"";
+                border-radius: 45%;
+                background:darken($color-blue, 10) url(../images/icon_instant_info_people.png) no-repeat center;
+                background-size: 50%;
+            }
+        }
+        &.collections{
+            &:after{
+                content:"";
+                border-radius: 45%;
+                background:$secondaryColor url(../images/icon_instant_info_book.png) no-repeat center;
+                background-size: 50%;
+            }
+        }
+        &.borrowing{
+            &:after{
+                content:"";
+                border-radius: 45%;
+                background:$importantColor url(../images/icon_instant_info_lend.png) no-repeat center;
+                background-size: 50%;
+            }
+        }
+    }
+
+    .update{
+        text-align: right;
+    }
+    .more{
+        width: 100%;
+    }
+}
+
+.questionnaire{
+    background: rgba(0, 0, 0, .5);
+    color:#fff;
+    text-align: left;
+    padding: 20px;
+}
+
 

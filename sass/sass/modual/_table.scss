@@ -2,6 +2,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    color:#fff;
     @include screen('xs_mobile') {
         width: 100%;
     }
@@ -22,22 +23,22 @@ table {
         text-align: left;
     }
     td{
-        border: #ddd 1px solid;
+        border-bottom: #606060 1px solid;
         word-break: break-all;
         a {
             word-break: break-all;
         }
     }
     th {
-        background-color: #F3F3F3;
-        color: #333;
-        border: #DDD 1px solid;
+        background: rgba(0, 0, 0, .6);
+        color: #fff;
+        border-bottom: solid 1px #fff;
         text-align: center;
         white-space: nowrap;
     }
     &.table_hover {
         tr:hover {
-            background: #F3F3F3;
+            background:#333;
         }
     }
     &.table_sprite {
@@ -61,14 +62,15 @@ table {
             top: -9999px;
             left: -9999px;
         }
+
         tr {
-            border: 1px solid #ccc;
+            border: 1px solid #606060;
             margin-bottom: 10px; // background-color: #333;
         }
         td {
             // Behave  like a "row"
             border: none !important;
-            border-bottom: 1px solid #eee !important;
+            border-bottom: 1px solid #606060 !important;
             position: relative;
             padding-left: 35% !important;
             white-space: normal;
@@ -83,7 +85,7 @@ table {
                 white-space: nowrap;
                 text-align: left;
                 font-weight: bold;
-                color: #000;
+                color: #fff;
             }
         }
     }
@@ -121,6 +123,8 @@ table {
         }
     }
     th {
+        background: #333;
+        border: solid 1px #ccc;
         &:first-child {
             width: 8em;
             white-space: normal;
@@ -143,6 +147,11 @@ table {
             }
         }
     }
+    td{
+      border: solid 1px #ccc;
+      background: #fff;
+      color:#111;  
+  }
 }
 .table_wrapper {
     @include screen('mobile') {

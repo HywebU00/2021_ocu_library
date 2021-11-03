@@ -3,12 +3,36 @@
 // 文章標題
 h1.title,
 h2.title {
-    line-height: 1.25em;
-    margin: .4em 0;
+    display: inline-block;
+    margin: .5em auto .5em;
+    position: relative;
+    color:#fff;
+    letter-spacing: .1em;
+    &:before{
+        content:'';
+        width: 12px;
+        height: 12px;
+        background: url('../images/h2_dot.png')no-repeat center center;
+        position: absolute;
+        left:-2em;
+        top:.34em;
+    }
+    &:after{
+        content:'';
+        width: 12px;
+        height: 12px;
+        background: url('../images/h2_dot.png')no-repeat center center;
+        position: absolute;
+        right:-2em;
+        top:.34em;
+    }
 }
 
 // .tt{ color: #222; }
 .cp {
+    text-align: left;
+    color:#fff;
+    font-weight: normal;
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -30,6 +54,7 @@ h2.title {
             text-align: center;
             display: block;
             font-size: .938em;
+            color:#333;
         }
 
         @include screen('mobile') {
@@ -44,6 +69,13 @@ h2.title {
 
     table {
         background: #FFF;
+        color:#111;
+        th{
+            border:solid 1px #333;
+        }
+        td{
+            border:solid 1px #606060;
+        }
     }
 
     img {
@@ -111,7 +143,7 @@ h2.title {
                 top: calc(50% - 1px);
                 width: 1em;
                 height: 2px;
-                background-color: $secondaryColor;
+                background-color: $aHover;
             }
         }
     }
@@ -130,6 +162,7 @@ h2.title {
             transition: all .3s;
             background: $primaryColor;
             color: #fff;
+            border:solid 1px $aHover;
 
             &:hover,
             &:focus {
@@ -192,13 +225,16 @@ h2.title {
 .file_download {
     width: 100%;
     margin: 0 auto 2em;
+    text-align: left;
     @include clearfix();
+
 
     h3 {
         font-size: 1.5em;
         padding: 12px 0px 15px 0px;
         margin: 0.5em 0px 0.2em;
-        border-bottom: 1px solid $primaryColor;
+        border-bottom: 1px solid #606060;
+        color:#fff;
     }
 
     ul {
@@ -212,7 +248,7 @@ h2.title {
         flex-wrap: wrap;
         position: relative;
         padding: .5em 0 .5em 1.5em;
-        border-bottom: solid 1px #eee;
+        border-bottom: solid 1px #606060;
 
         &:before {
             content: '·';
@@ -221,15 +257,15 @@ h2.title {
             width: 1em;
             height: 1em;
             position: absolute;
-            top: .32em;
+            top: .45em;
             left: .1em;
-            color: #666;
+            color: $aHover;
         }
 
         .file_name {
             line-height: 1.8em;
             margin: .2em .5em .2em 0;
-            color: #222;
+            color: #fff;
 
             ~span {
                 flex: 0 0 auto;
@@ -237,7 +273,7 @@ h2.title {
                 font-size: .875em;
                 line-height: 1.5em;
                 vertical-align: middle;
-                color: #666;
+                color: $aHover;
 
                 a {
                     color: #fff;
@@ -411,13 +447,15 @@ h2.title {
 // 外部連結
 .web_link {
     margin: 1em 0;
+    text-align: left;
     @extend %clearfix;
 
     h3 {
         font-size: 1.5em;
         padding: 12px 0px 15px 0px;
         margin: 0.5em 0px 0.2em;
-        border-bottom: 1px solid $primaryColor;
+        border-bottom: 1px solid #606060;
+        color:#fff;
     }
 
     ol,
@@ -430,7 +468,7 @@ h2.title {
     li {
         position: relative;
         padding: .5em 0;
-        border-bottom: solid 1px #eee;
+        border-bottom: solid 1px #606060;
         padding-left: 1.5em;
 
         &:before {
@@ -442,33 +480,35 @@ h2.title {
             position: absolute;
             top: .35em;
             left: .1em;
-            color: #666;
+            color: $aHover;
         }
 
         a {
             padding: .2em 0px;
             display: block;
             @include aSetting_nocolor;
+            color:#fff;
         }
     }
 }
 
 .publish_info {
-    font-size: 0.875em;
-    line-height: 1.5em;
+    font-size: 0.875em!important;
+    line-height: 1.3em;
     list-style: none;
     margin: 0 0 .7em 0;
-    border-left: solid 5px $primaryColor;
-    padding: 0.8em 1.5em 0.8em;
-    background: #F2F2F2;
+    border-left: solid 5px $aHover;
+    padding: 0.1em 1.5em 0.1em;
+    background: rgba(0, 0,0, .5);
     display: flex;
     flex-wrap: wrap;
+    font-weight: normal;
     @extend %clearfix;
     box-sizing: border-box;
 
     li {
         flex: 1 1 33.33333%;
-        margin-bottom: .5em;
+        margin-bottom: 0;
 
         @include screen('tablet') {
             flex: 1 1 50%;
@@ -485,7 +525,8 @@ h2.title {
         font-size: 1.5em;
         padding: 12px 0px 15px 0px;
         margin: 0.5em 0px 0.2em;
-        border-bottom: 1px solid $primaryColor;
+        border-bottom: 1px solid #606060;
+        color:#fff;
     }
 
     ol,
@@ -520,6 +561,7 @@ h2.title {
             padding: .5em 0;
             overflow: hidden;
             text-overflow: ellipsis;
+            color:#fff;
         }
     }
 }

@@ -458,3 +458,37 @@
         }
     }
 }
+
+
+.innerheader{
+    .container{
+        background: rgba(0, 0, 0, .6);
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding: 0 30px 5px 40px;
+    }
+    .navigation{
+        .navlist{
+            background: #4b4b4b;
+            li{
+                a{
+                   &:hover, &:focus{
+                       color:#a8d8ff;  
+                   } 
+               }                
+           }
+
+       }
+       .nav_reader{
+        background: #4b4b4b;
+        .reader_btn-1,
+        .reader_btn-2{
+            &:hover, &:focus{
+             background: #4b4b4b;
+             color:#a8d8ff;
+         }
+     }
+
+ }
+}
+}

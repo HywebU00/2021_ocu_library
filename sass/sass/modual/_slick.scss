@@ -442,6 +442,98 @@
     }
 }
 
+//內頁Banner
+.bannerSlider{
+    // @include gutter(70px);
+    margin: 15px 0;
+    @include screen('mobile') {
+        @include gutter();
+        margin: 0;
+    }
+
+    .slick-prev, .slick-next{
+        background-color: transparent;
+        width: 60px;
+        height: 100px;
+        @include screen('mobile') {
+            background-size: 30px 30px;
+        }
+        
+    }
+    .slick-prev {
+        left: 5px;
+        top:32%;
+        background: url('../images/slick/icon_arrow_left2_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
+        background-size: 50px 50px;
+        &:hover, &:focus {
+            background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
+            background-size: 50px 50px;
+        }
+
+        @include screen('mobile') {
+            top:0px;
+            left: -20px;
+            background-size: 30px 30px;
+            &:hover, &:focus {
+              background-size: 30px 30px;  
+          }
+      }
+  }
+  .slick-next {
+    right: 5px;
+    top:32%;
+    background: url('../images/slick/icon_arrow_right2_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
+    background-size: 50px 50px;
+    &:hover, &:focus {
+        background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
+        background-size: 50px 50px;
+    }
+    @include screen('mobile') {
+        top:0px;
+        right: -20px;
+        background-size: 30px 30px;
+        &:hover, &:focus {
+          background-size: 30px 30px;  
+      }
+  }
+}
+.img-container {
+    width: 1000px;
+    height: 180px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0) url('../images/banner01.jpg')no-repeat center center;
+    background-size: contain;
+    @include screen('mobile') {
+        width: 100%;
+        height: 60px;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        img {
+            margin: 0 auto;
+        }
+
+    }
+    &:focus {
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            box-shadow: 0 0px 0px 3px $primaryColor inset;
+        }
+    }
+}
+
+}
+
 //  slick燈箱
 .lightbox_slider {
     h3 {
@@ -566,44 +658,54 @@
     //Arrows
     .slick-prev {
         // left: -1 * $grid-gutter-width/2;
-        left: -10px;
+        left: -8px;
         top:35%;
-    }
-    .slick-next {
+        background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(0, 0, 0, 0);
+        background-size: 30px 30px;
+        &:hover, &:focus {
+          background-size: 30px 30px;  
+      }
+  }
+  .slick-next {
         // right: -1 * $grid-gutter-width/2;
-        right:-10px;
+        right:-8px;
         top:35%;
-    }
-    a {
-        color: #555;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        &:hover,
-        &:focus {
-            .caption {
-                bottom: 0 !important;
-            }
+        background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(0, 0, 0, 0);
+        background-size: 30px 30px;
+        &:hover, &:focus {
+          background-size: 30px 30px;  
+      }
+  }
+  a {
+    color: #555;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &:hover,
+    &:focus {
+        .caption {
+            bottom: 0 !important;
         }
     }
-    .link{
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        color:#fff;
-        background: rgba($secondaryColor, .9);
-        padding: 0 .5em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: .875em;
-        &:hover{
-            color: #fff;
-        }
+}
+.link{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    color:#fff;
+    background: rgba($secondaryColor, .9);
+    padding: 0 .5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .875em;
+    &:hover{
+        color: #fff;
     }
+}
 }
 /*  slick-lightbox  */
 .slick-lightbox {

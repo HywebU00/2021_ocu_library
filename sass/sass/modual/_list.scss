@@ -1,13 +1,16 @@
 .lp {
+    text-align: left;
+
     table {
         td {
             a {
                 @include aSetting_nocolor;
+                color:#fff;
             }
 
             &.date {
                 text-align: center;
-                color: #666;
+                color: #fff;
 
                 @include screen('mobile') {
                     text-align: left;
@@ -16,7 +19,7 @@
 
             &.num {
                 text-align: center;
-                color: #666;
+                color: #fff;
 
                 @include screen('mobile') {
                     text-align: left;
@@ -26,18 +29,20 @@
     }
 
     .list {
+        color:$aHover;
+        font-weight: normal;
 
         &>ul,
         ol {
             list-style-type: none;
             padding: 0;
-            border-top: 2px solid $primaryColor;
+            border-top: 1px solid #fff;
 
             &>li {
                 display: flex;
                 flex-wrap: wrap;
                 padding: 1em 0;
-                border-bottom: 1px solid #DDD;
+                border-bottom: 1px solid #606060;
                 position: relative; // outline: 1px solid blue;
 
                 .tag {
@@ -49,7 +54,7 @@
                     padding-left: 2em;
                     position: relative;
                     line-height: 1.45em;
-                    color: $color-word;
+                    color: #fff;
 
                     &:hover {
                         color: $aHover;
@@ -79,8 +84,8 @@
                 }
 
                 time {
-                    display: block;
-                    color: #AAA;
+                    display: inline-block;
+                    color: #ccc;
                     font-size: .938em;
                 }
             }
@@ -132,7 +137,7 @@
                 -webkit-line-clamp: 2;
                 overflow: hidden;
                 max-height: 3.125em;
-                color: $color-word;
+                color: #fff;
                 font-weight: bold;
 
                 @include screen("mobile") {
@@ -141,7 +146,7 @@
                 }
 
                 &:hover {
-                    color: $secondaryColor;
+                    color: $aHover;
                 }
             }
         }
@@ -159,7 +164,7 @@
     }
 
     li {
-        flex-basis: 25%;
+        flex-basis: 33.33333%;
         @include gutter();
 
         @include screen("tablet") {
@@ -167,7 +172,7 @@
         }
 
         @include screen("mobile") {
-            flex-basis: 50%;
+            flex-basis: 100%;
         }
 
         padding-bottom: 30px;
@@ -175,6 +180,9 @@
         a {
             box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);
             background: #FFF;
+            &:hover, &:focus{
+                color: $primaryColor;
+            }
         }
     }
 

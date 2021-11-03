@@ -67,17 +67,18 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
         @include adjust-font-size-to($base-font-size);
     }
     blockquote {
-        background: #f2f2f2;
+        background: rgba(0, 0,0, .5);
         font-style: normal;
         display: block;
         @include adjust-font-size-to($base-font-size);
-        border-left: 5px solid $primaryColor;
-        padding: $base-font-size*2;
+        border-left: solid 5px $aHover;
+        padding: $base-font-size*1;
         box-sizing: border-box;
         margin-left: .5em;
         margin-right: .5em;
+        color:$aHover;
         @include leader(0);
-        @include trailer(2);
+        @include trailer(1);
     }
     img {
         max-width: 100%;

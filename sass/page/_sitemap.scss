@@ -1,43 +1,48 @@
  /* sitemap */
  .sitemap {
      margin: 0px auto 1em;
+     background: rgba(255, 255, 255, .8);
+     text-align: left;
+     padding: 20px;
+     border-radius: 8px;
      @extend %clearfix;
      p {
-         font-size: .813em;
-         kbd {
-             border: 1px solid #AAA;
-             background: transparent;
-             color: $color-word;
-             padding:0 .3em;
-             margin: 0 .2em .1em;
-             kbd {
-                 border: none;
-             }
-         }
-     }
-     .accesskeyDefine {
-         padding: 1em 2em;
-         background: #EEE;
-         border-radius: 6px;
-         li {
-             margin-bottom: .2em;
+        font-size: .875em;
+        kbd {
+         border: 1px solid #AAA;
+           // background: transparent;
+           background: #fff;
+           color: $color-word;
+           padding:0 .3em;
+           margin: 0 .2em .1em;
+           kbd {
+             border: none;
          }
      }
  }
- $sitemapLength : 4;
- $sitemapWidth:100%/ $sitemapLength;
- .cascading {
-     border-top: 1px solid #CCC;
-     @include gutter;
-     box-sizing: border-box;
-     ul {
-         @include li-reset;
-     }
+ .accesskeyDefine {
+     padding: 1em 2em;
+     background: #fff;
+     border-radius: 6px;
      li {
-         line-height: 1.5;
-         width: $sitemapWidth;
-         display: inline-block;
-         vertical-align: top;
+         margin-bottom: .2em;
+     }
+ }
+}
+$sitemapLength : 4;
+$sitemapWidth:100%/ $sitemapLength;
+.cascading {
+ border-top: 1px solid #CCC;
+ @include gutter;
+ box-sizing: border-box;
+ ul {
+     @include li-reset;
+ }
+ li {
+     line-height: 1.5;
+     width: $sitemapWidth;
+     display: inline-block;
+     vertical-align: top;
          margin: 0 -5px 1em 0; // margin-right:改為負5;
          box-sizing: border-box;
          padding: 0px .5em;
