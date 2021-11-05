@@ -86,11 +86,11 @@ body {
         border-radius: 8px;
         padding: 0 50px 20px;
         @include screen('mobile') {
-         padding: 15px; 
-     }
+           padding: 15px; 
+       }
 
- }
- .top_block {
+   }
+   .top_block {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
@@ -1550,36 +1550,40 @@ select {
 //manual
 .manual{
     .container{
-     position: relative;
-     height: 180px;
-     overflow: hidden;
-     background: url('../images/manual_bg.jpg')no-repeat left top;
-     background-size: cover;
- }
+       position: relative;
+       height: 180px;
+       overflow: hidden;
+       background: url('../images/manual_bg.jpg')no-repeat left top;
+       background-size: cover;
+   }
 
- .booktext {
-  position: absolute;
-  width: 450px;
-  background: url('../images/manual_bookbg.png')no-repeat left top;
-  width: 392px;
-  height: 278px;
-  left: 35px;
-  top:5px;
-  animation: circle-move 2.4s ease-in-out infinite;
+   .booktext {
+      position: absolute;
+      width: 450px;
+      background: url('../images/manual_bookbg.png')no-repeat left top;
+      width: 392px;
+      height: 278px;
+      left: 35px;
+      top:5px;
+      animation: circle-move 2.4s ease-in-out infinite;
 
-  @include screen('xs_mobile') {
-    background-size: 100% auto;
-    width: 300px;
-    left: 20px;
-}
+      @include screen('xs_mobile') {
+        background-size: 100% auto;
+        width: 300px;
+        left: 20px;
+    }
 }
 
 .word {
   position: absolute;
   opacity: 0;
   left:57px;
-  top:90px;
+  top:75px;
   font-size: 1.8em;
+  max-width: 10em;
+  max-height: 1.5em;
+  line-height: 2em;
+  overflow: hidden;
   color:#341700;
   @include screen('xs_mobile') {
       left:37px;
@@ -1601,18 +1605,18 @@ select {
     position: relative;
     left:57px;
     top:125px;
-    &:after{
-        content:'';
-        width: 5.5em;
-        height: 1px;
-        background: #7b4212;
-        position: absolute;
-        top:.75em;
-        left:10.5em;
-        @include screen('xs_mobile') {
-          width: 2.8em;  
-      }
-  }
+  //   &:after{
+  //       content:'';
+  //       width: 5.5em;
+  //       height: 1px;
+  //       background: #7b4212;
+  //       position: absolute;
+  //       top:.75em;
+  //       left:10.5em;
+  //       @include screen('xs_mobile') {
+  //         width: 2.8em;  
+  //     }
+  // }
   @include screen('xs_mobile') {
       left:37px;
       top:115px;  
@@ -1672,6 +1676,31 @@ select {
     }
 }
 
+//manual2
+.manual2{
+    padding: 0 0 .5em!important;
+    .container{
+       position: relative;
+       overflow: hidden;
+   }
+   .bannerSlider{
+    margin:0;
+}
+.more{
+    margin: .3em auto 0;
+    // max-width: 1200px;
+    a{
+        color:#fff;
+        padding: .2em 2.5em .2em 1em;
+
+        &:hover, &:focus{
+            color:#c5d7ff;
+            background: rgba(0, 0, 0, .9);
+            border-radius: 30px;
+        }
+    }
+}
+}
 
 //book_info
 .book_info {
