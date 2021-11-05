@@ -264,6 +264,39 @@
             @include screen("xs_mobile") {
                 max-width: 100%;
             }
+            h3{
+                text-align: center;
+                height: 1.2em;
+                overflow: hidden;
+                font-size: 1.063em;
+                margin-bottom: .5em;
+
+            }
+            .more2{
+                text-align: center;
+                margin-top: -.5em;
+                span{
+                    padding: 0.3em 2em 0.3em 1em;
+                    border-radius: 30px;
+                    border: solid 1px #c5d7ff;
+                    min-width: 200px;
+                    position: relative;
+                    font-size: .813em;
+                    margin: 0 auto;
+                    &:after{
+                        content: "+";
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 1.5em;
+                        height: 1.5em;
+                        font-size: 1.5em;
+                        font-weight: 200;
+                        transition: .3s ease-in;
+                    }
+                }
+            }
 
             .img-container {
 
@@ -320,6 +353,23 @@
                         }
                     }
                 }
+            }
+            .sort{
+                text-align: center;
+                font-size: .875em;
+                span{
+                    display: inline-block;
+                    margin: 0 auto 1em;
+                    background: $importantColor;
+                    color:#fff;
+                    padding: 2px 2em;
+                }
+
+            }
+            p{
+                font-size: .938em;
+                height: 2.85em;
+                overflow: hidden;
             }
         }
     }

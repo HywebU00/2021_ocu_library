@@ -408,3 +408,24 @@ setInterval(changeWord, 4000);
 
 
 });
+
+//
+$(".accordionqa .accordionblock").each(function () {
+  var _accordionItem = $(this).children(".question");
+  var _openclose_btn = _accordionItem.children(".openclose_btn");
+  var _answercontent = $(this).children(".answer");
+  if (_answercontent.length == 0) {
+    _openclose_btn.hide();
+} else {
+    function accordion3(e) {
+      if (_answercontent.is(":hidden")) {
+        _answercontent.slideDown();
+        _openclose_btn.text("收合").addClass("open");
+    } else {
+        _answercontent.slideUp();
+        _openclose_btn.text("展開").removeClass("open");
+    }
+}
+_accordionItem.click(accordion3);
+}
+});

@@ -18,3 +18,136 @@
     }
 }
 // 
+.accordionqa {
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 2em;
+  .accordionblock {
+    width: 100%;
+    margin: 0 0 10px;
+    background: rgba(255, 255, 255, .9);
+    border-radius: 8px;
+    button.question {
+        padding: 15px 40px 15px 35px;
+        border-radius: 5px;
+        font-size: 1.125em;
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        border: 1px solid #000;
+        cursor: pointer;
+        font-weight: bolder;
+        color: #fff;
+        box-sizing: border-box;
+        margin: 0;
+        background: #000;
+        vertical-align: middle;
+        &:hover,
+        &:focus {
+            background-color: #333;
+            border: 1px solid #333;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            box-shadow: none;
+        }
+
+        .Q_word {
+            float: left;
+            display: inline-block;
+            margin-right: 0;
+            margin-left: -15px;
+            font-size: 1.125em;
+            color: $aHover;
+            font-weight: bolder;
+        }
+        .openclose_btn {
+            position: absolute;
+            top: 12px;
+            right: 40px;
+            color: #333;
+        // background-color: #eee;
+        // border-radius: 5px;
+        // padding: 3px 5px;
+        font-size: 0;
+        &:after {
+          content: "";
+          border: 2px solid $aHover;
+          border-top: none;
+          border-left: none;
+          position: absolute;
+          top: 9px;
+          right: -20px;
+          width: 8px;
+          height: 8px;
+          transform: rotate(45deg);
+          transition: transform 0.5s;
+      }
+      &.open {
+          &:after {
+            top: 10px;
+            transform: rotate(225deg);
+        }
+    }
+}
+}
+.answer {
+    color: #333;
+    padding: 15px 15px 15px 24px;
+    display: none;
+    .A_word {
+        float: left;
+        margin-right: 10px;
+        font-size: 1.25em;
+        color: #d04500;
+        font-weight: bolder;
+        margin-top: 1px;
+    }
+    .Ablock {
+        overflow: hidden;
+        p {
+            margin: 0 0 .5em 0;
+            line-height: 1.6em;
+            a {
+                color: #333;
+            }
+            span {
+                color: #d04500;
+                font-weight: bolder;
+                padding: 0 3px;
+            }
+        }
+        em {
+          font-style: normal;
+      }
+  }
+  ul,
+  ol {
+    margin: 0 0 10px;
+    padding: 0;
+    li {
+      list-style-type: none;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 10px 10px 15px;
+      position: relative;
+      &:before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #333;
+        position: absolute;
+        left: 0;
+        top: 19px;
+    }
+    a {
+        text-decoration: underline;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+}
+}
+}
+}

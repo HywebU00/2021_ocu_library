@@ -86,11 +86,11 @@ body {
         border-radius: 8px;
         padding: 0 50px 20px;
         @include screen('mobile') {
-           padding: 15px; 
-       }
+         padding: 15px; 
+     }
 
-   }
-   .top_block {
+ }
+ .top_block {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
@@ -393,7 +393,7 @@ body {
         border-radius: 0;
 
         &:hover{
-            background: $aHover;
+            color: $aHover;
         }
         &:focus{
             outline: solid 2px $importantColor;
@@ -1550,28 +1550,28 @@ select {
 //manual
 .manual{
     .container{
-       position: relative;
-       height: 180px;
-       overflow: hidden;
-       background: url('../images/manual_bg.jpg')no-repeat left top;
-       background-size: cover;
-   }
+     position: relative;
+     height: 180px;
+     overflow: hidden;
+     background: url('../images/manual_bg.jpg')no-repeat left top;
+     background-size: cover;
+ }
 
-   .booktext {
-      position: absolute;
-      width: 450px;
-      background: url('../images/manual_bookbg.png')no-repeat left top;
-      width: 392px;
-      height: 278px;
-      left: 35px;
-      top:5px;
-      animation: circle-move 2.4s ease-in-out infinite;
+ .booktext {
+  position: absolute;
+  width: 450px;
+  background: url('../images/manual_bookbg.png')no-repeat left top;
+  width: 392px;
+  height: 278px;
+  left: 35px;
+  top:5px;
+  animation: circle-move 2.4s ease-in-out infinite;
 
-      @include screen('xs_mobile') {
-        background-size: 100% auto;
-        width: 300px;
-        left: 20px;
-    }
+  @include screen('xs_mobile') {
+    background-size: 100% auto;
+    width: 300px;
+    left: 20px;
+}
 }
 
 .word {
@@ -1876,4 +1876,21 @@ select {
     padding: 20px;
 }
 
+.calendar{
+    margin-bottom: 1em;
+}
+.c_int{
+    color:#fff;
+    font-size: .813em;
+    text-align: left;
+    font-weight: normal;
+}
+
+.datetime{
+    background: #000;
+    color:#fff;
+    padding: .3em;
+    border-radius: 3px;
+    font-size: .875em;
+}
 
