@@ -107,7 +107,11 @@ h2.title {
     }
 
     a {
-        @include aSetting;
+        color:$aHover;
+        &:hover, &:focus{
+            color: #fff;
+            text-decoration: underline;
+        }
     }
 
     ol,
