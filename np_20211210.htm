@@ -1,0 +1,473 @@
+<!DOCTYPE html><html xml:lang="zh-TW" lang="zh-TW" xmlns:user="urn:user-namespace-here" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:hyweb="urn:gip-hyweb-com" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>僑光科技大學圖書館-中區技職校院「圖書代借代還」館際合作-中區技職校院「圖書代借代還」館際合作</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.min.css">
+    <link rel="stylesheet" href="vendor/animate/animate.css">
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/hyui.css">
+</head>
+<body>
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <div class="wrapper">
+        <header class="header innerheader">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方導覽區塊">:::</a>
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <div class="navlist"><ul>
+                        <li><a href="sp?xdUrl=/wSite/ApBlock/QA.jsp&mp=1">意見交流</a></li>
+                        <li><a href="sitemap">網站導覽</a></li>
+                        <li><a href="mp">僑光首頁</a></li>
+                    </ul></div>
+                    <div class="nav_reader">
+                        <button id="login_btn" class="reader_btn-1">讀者登入</button><button class="reader_btn-2" id="loggedin" style="display: none">讀者</button>
+                    </div>
+                </nav>
+                <h1>
+                    <a title="僑光科技大學圖書館" href="mp?mp=1"><img src="public/LayoutDesign/1635755498761.png" alt="僑光科技大學圖書館" title="僑光科技大學圖書館"></a>
+                </h1>
+                <div class="nav_reader">
+                    <!-- button class="reader_btn-1">讀者登入</button -->
+                    <!--未登入狀態區塊-->
+                    <div class="nav_readerArea-1" style="display: none;">
+                        <form id="login" name="login" method="post" action="/wSite/sp?xdUrl=/wSite/MemberManager/HyLibSSOLoginService.jsp">
+                            <button type="button" class="close">關閉</button>
+                            <div class="form_grp">
+                                <label for="account">帳號：</label>
+                                <input name="account" id="account" type="text" placeholder="請輸入帳號">
+                            </div>
+                            <div class="form_grp">
+                                <label for="passwd">密碼：</label>
+                                <input name="passwd" id="passwd" type="password" placeholder="請輸入密碼">
+                            </div>
+                            <div class="check_grp">
+                                <label><input type="checkbox">記住帳號</label>
+                            </div>
+                            <div class="btn_grp">
+                                <button type="button" id="btn_sub" name="btn_sub" class="loginout" >登入</button>
+                            </div>
+                        </form>
+                    </div>
+                    <script>
+                        $("#login_btn").show();
+                        $("#loggedin").hide();
+                        $("#btn_sub").click(function() {
+                            if ($("#account").val() == '') {
+                                alert('請輸入帳號');
+                                return false;
+                            } else if ($("#passwd").val() == '') {
+                                alert('請輸入密碼');
+                                return false;
+                            } else {
+                                $("#login").submit();
+                            }
+                        });
+                    </script>
+                </div>
+                <!--headline End--><nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="np?ctNode=283&mp=1&idPath=290_283" title="館藏查詢">館藏查詢</a>
+                            <ul>
+                                <li>
+                                    <a href="https://libwebpac.ocu.edu.tw/webpacIndex.jsp" title="館藏查詢, 另開新視窗." target="_blank">館藏查詢</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=297&mp=1&idPath=290_283_297" title="期刊清單">期刊清單</a>
+                                </li>
+                                <li>
+                                    <a href="sp?xdUrl=/wSite/ApBlock/LoginEBOOK.jsp&ctNode=298&mp=1" title="電子書, 另開新視窗." target="_blank">電子書</a>
+                                </li>
+                                <li>
+                                    <a href="sp?xdUrl=/wSite/ApBlock/LoginJournal.jsp&ctNode=299&mp=1" title="電子期刊, 另開新視窗." target="_blank">電子期刊</a>
+                                </li>
+                                <li>
+                                    <a href="https://cloud.ncl.edu.tw/ocu/" title="論文數位典藏系統, 另開新視窗." target="_blank">論文數位典藏系統</a>
+                                </li>
+                                <li>
+                                    <a href="http://203.72.145.196/" title="多媒體影音管理系統, 另開新視窗." target="_blank">多媒體影音管理系統</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sp?xdUrl=/wSite/ApBlock/LoginERM.jsp&mp=1&ctNode=817&idPath=290_817" title="資料庫檢索, 另開新視窗." target="_blank">資料庫檢索</a>
+                        </li>
+                        <li>
+                            <a href="np?ctNode=285&mp=1&idPath=290_285" title="館際合作">館際合作</a>
+                            <ul>
+                                <li>
+                                    <a href="np?ctNode=754&mp=1&idPath=290_285_754" title="中區技職校院「圖書代借代還」館際合作">中區技職校院「圖書代借代還」館際合作</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=826&mp=1&idPath=290_285_826" title="中部大學圖書館聯盟">中部大學圖書館聯盟</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=454&mp=1&idPath=290_285_454" title="館際合作說明">館際合作說明</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=460&mp=1&idPath=290_285_460" title="全國文獻傳遞服務">全國文獻傳遞服務</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=458&mp=1&idPath=290_285_458" title="中部技專校際聯盟">中部技專校際聯盟</a>
+                                </li>
+                                <li>
+                                    <a href="http://sticnet.stpi.narl.org.tw/unicatc/ttswebx?@0:0:1:unicatq" title="全國期刊聯合目錄, 另開新視窗." target="_blank">全國期刊聯合目錄</a>
+                                </li>
+                                <li>
+                                    <a href="https://unicat.stpi.narl.org.tw/unicat2c/unicat2tp?@@0.23524816255912206" title="電子期刊聯合目錄, 另開新視窗." target="_blank">電子期刊聯合目錄</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="np?ctNode=286&mp=1&idPath=290_286" title="讀者服務">讀者服務</a>
+                            <ul>
+                                <li>
+                                    <a href="MemberManager/hylibForward.jsp?rdurl=personalization/personal.jsp&mp=1" title="個人資料查詢及借閱">個人資料查詢及借閱</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=328&mp=1&idPath=290_286_328" title="圖書館利用指引">圖書館利用指引</a>
+                                </li>
+                                <li>
+                                    <a href="http://203.72.145.166/indexRecommand.do" title="推薦書刊, 另開新視窗." target="_blank">推薦書刊</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="np?ctNode=287&mp=1&idPath=290_287" title="網路資源">網路資源</a>
+                            <ul>
+                                <li>
+                                    <a href="lp?ctNode=441&mp=1&idPath=290_287_441" title="圖書館連結">圖書館連結</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=442&mp=1&idPath=290_287_442" title="升學與就業資訊">升學與就業資訊</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=447&mp=1&idPath=290_287_447" title="留學與遊學資訊">留學與遊學資訊</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=448&mp=1&idPath=290_287_448" title="參考工具資源">參考工具資源</a>
+                                </li>
+                                <li>
+                                    <a href="http://ndltd.ncl.edu.tw/" title="博碩士資源, 另開新視窗." target="_blank">博碩士資源</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="np?ctNode=295&mp=1&idPath=290_295" title="圖書館導覽">圖書館導覽</a>
+                            <ul>
+                                <li>
+                                    <a href="lp?ctNode=433&mp=1&idPath=290_295_433" title="圖書館簡介">圖書館簡介</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=827&mp=1&idPath=290_295_827" title="圖書館影片">圖書館影片</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=434&mp=1&idPath=290_295_434" title="圖資委員會會議記錄">圖資委員會會議記錄</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=435&mp=1&idPath=290_295_435" title="規則與辦法">規則與辦法</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=443&mp=1&idPath=290_295_443" title="各式表單下載">各式表單下載</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=436&mp=1&idPath=290_295_436" title="樓層簡介">樓層簡介</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=856&mp=1&idPath=290_295_856" title="圖書館配置圖">圖書館配置圖</a>
+                                </li>
+                                <li>
+                                    <a href="http://w3.ocu.edu.tw/lib/memberslib.htm" title="組織成員, 另開新視窗." target="_blank">組織成員</a>
+                                </li>
+                                <li>
+                                    <a href="sp?xdUrl=/wSite/ApBlock/GoogleCalendar.jsp&ctNode=438&mp=1" title="開放時間, 另開新視窗." target="_blank">開放時間</a>
+                                </li>
+                                <li>
+                                    <a href="sp?xdUrl=/wSite/ApBlock/LibInfo.jsp&ctNode=867&mp=1" title="館訊, 另開新視窗." target="_blank">館訊</a>
+                                </li>
+                                <li>
+                                    <a href="sp?xdUrl=/wSite/Survey/SurveyActiveList.jsp&ctNode=868&mp=1" title="問卷調查管理">問卷調查管理</a>
+                                </li>
+                                <li>
+                                    <a href="sp?xdUrl=/wSite/ActivitySign/ActivityList.jsp&mp=1&ctNode=869" title="活動報名管理, 另開新視窗." target="_blank">活動報名管理</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=840&mp=1&idPath=290_295_840" title="內控作業流程">內控作業流程</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="np?ctNode=775&mp=1&idPath=290_775" title="學報出版">學報出版</a>
+                            <ul>
+                                <li>
+                                    <a href="np?ctNode=776&mp=1&idPath=290_775_776" title="徵稿消息">徵稿消息</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=777&mp=1&idPath=290_775_777" title="學報法規">學報法規</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=778&mp=1&idPath=290_775_778" title="表格">表格</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=779&mp=1&idPath=290_775_779" title="會議記錄">會議記錄</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=782&mp=1&idPath=290_775_782" title="各期目錄">各期目錄</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=781&mp=1&idPath=290_775_781" title="聯絡我們">聯絡我們</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="np?ctNode=843&mp=1&idPath=290_843" title="智財權">智財權</a>
+                            <ul>
+                                <li>
+                                    <a href="np?ctNode=844&mp=1&idPath=290_843_844" title="公告及宣導">公告及宣導</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=845&mp=1&idPath=290_843_845" title="智慧財產權">智慧財產權</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=846&mp=1&idPath=290_843_846" title="專利法">專利法</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=847&mp=1&idPath=290_843_847" title="商標法">商標法</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=848&mp=1&idPath=290_843_848" title="著作權法">著作權法</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=849&mp=1&idPath=290_843_849" title="文章宣導">文章宣導</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=850&mp=1&idPath=290_843_850" title="相關案例">相關案例</a>
+                                </li>
+                                <li>
+                                    <a href="lp?ctNode=853&mp=1&idPath=290_843_853" title="智財網站連結">智財網站連結</a>
+                                </li>
+                                <li>
+                                    <a href="np?ctNode=852&mp=1&idPath=290_843_852" title="智財 Q&A">智財 Q&A</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <noscript>TAB標籤功能，如不執行不影響您資料瀏覽</noscript>
+            </div>
+        </header>
+        <div id="center" class="main innerpage">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <section class="col-12 full main_image">
+                <div class="container"></div>
+            </section>
+            <div class="container">
+                <div class="function_nav"></div>
+                <div class="breadcrumb">
+                    <ul>
+                        <li>
+                            <a href="mp?mp=1" title="首頁">首頁</a>
+                        </li>
+                        >
+                        <li>
+                            <a href="np?ctNode=285&mp=1" title="館際合作">館際合作</a>
+                        </li>
+                        >
+                        <li>
+                            <a href="np?ctNode=754&mp=1" title="中區技職校院「圖書代借代還」館際合作">中區技職校院「圖書代借代還」館際合作</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--bannerSlider star-->
+                <section class="manual2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="container">
+                        <div class="bannerSlider wow fadeInUp">
+                            <div class="img-container">
+                                <a href="http://w3.ocu.edu.tw/lib/2020winter-openreading.htm" title="2020閱讀趣 ~開卷有禮．快樂閱讀，萊爾富．僑光書坊禮卷好禮獎不完!(另開新視窗)" target='_blank'>
+                                    <img data-lazy="public/Data/f1637663126565.jpg" class="contain" alt="2020閱讀趣 ~開卷有禮．快樂閱讀，萊爾富．僑光書坊禮卷好禮獎不完!(另開新視窗)" class="fill">
+                                </a>
+                            </div>
+                            <div class="img-container">
+                                <a href="http://w3.ocu.edu.tw/lib/2020winter-openreading.htm" title="2020閱讀趣 ~開卷有禮．快樂閱讀，萊爾富．僑光書坊禮卷好禮獎不完!(另開新視窗)" target='_blank'>
+                                    <img data-lazy="public/Data/f1637662987005.jpg" class="contain" alt="2020閱讀趣 ~開卷有禮．快樂閱讀，萊爾富．僑光書坊禮卷好禮獎不完!(另開新視窗)" class="fill">
+                                </a>
+                            </div>
+                            <div class="img-container">
+                                <a href="#" title="2021年四月【新書展】：讓「四季閱讀」變成您的日常(另開新視窗)" target='_blank'>
+                                    <img data-lazy="public/Data/2021reading-lib-2-final-jpg.jpg" class="contain" alt="2021年四月【新書展】：讓「四季閱讀」變成您的日常(另開新視窗)" class="fill">
+                                </a>
+                            </div>
+                            <div class="img-container">
+                                <a href="#" title="2021閱讀趣 ~開卷有禮．快樂閱讀，萊爾富．僑光書坊禮卷好禮獎不完!(另開新視窗)" target='_blank'>
+                                    <img data-lazy="public/Data/2021-openbooks-1010-150-lib-banner-jpg-ok.jpg" class="contain" alt="2021閱讀趣 ~開卷有禮．快樂閱讀，萊爾富．僑光書坊禮卷好禮獎不完!(另開新視窗)" class="fill">
+                                </a>
+                            </div>
+                            <div class="img-container">
+                                <a href="#" title="2020年後防疫生活．開啟閱讀新視界(另開新視窗)" target='_blank'>
+                                    <img data-lazy="public/Data/109COVID-19-lib-1010-150-final-ok-jpg.jpg" class="contain" alt="2020年後防疫生活．開啟閱讀新視界(另開新視窗)" class="fill">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--bannerSlider End-->
+                <section class="col2block">
+                    <!--NodeForCP star-->
+                    <div id="NodeList" class="left_block">
+                        <h2>館際合作</h2>
+                        <ul>
+                            <li><a href="np?ctNode=754&mp=1" id="getNode754">中區技職校院「圖書代借代還」館際合作</a></li>
+                            <li><a href="np?ctNode=826&mp=1" id="getNode826">中部大學圖書館聯盟</a></li>
+                            <li><a href="np?ctNode=454&mp=1" id="getNode454">館際合作說明</a></li>
+                            <li><a href="np?ctNode=460&mp=1" id="getNode460">全國文獻傳遞服務</a></li>
+                            <li><a href="np?ctNode=458&mp=1" id="getNode458">中部技專校際聯盟</a></li>
+                            <li><a href="np?ctNode=461&mp=1" id="getNode461">全國期刊聯合目錄</a></li>
+                            <li><a href="np?ctNode=464&mp=1" id="getNode464">電子期刊聯合目錄</a></li>
+                        </ul>
+                    </div>
+                    <!--NodeForCP End-->
+                    <div class="center_block">
+                        <h2 class="title">中區技職校院「圖書代借代還」館際合作</h2>
+                        <section class="cp">
+                            <h3>中區技職校院「圖書代借代還」館際合作</h3>
+                            <div class="function_panel">
+                                <ul>
+                                    <li>資料來源：<span>僑光科技大學圖書館</span>
+                                    </li>
+                                    <li>日期：<span>2012/07/04</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>
+                                <p align="center"><img alt="圖書代借代還服務系統" src="/site/ocit/public/MMO/ocit_image/interlib-ok.jpg" width="90%" height="auto" mmoid="647158"/></p>
+                                <p align="center">2018年4月16日重新啟動「圖書代借代還服務」，歡迎大家多多使用！</p>
+                                <br/>
+                                <p>一、簡介<br/>
+                                    為提升中區技職校院「聯合圖書資源共享平台計畫」之服務功能，有效整合夥伴聯盟圖書館之館藏資源，透過互通交流借閱方式，增加附加效益，以資源共享、平等互惠之原則，積極推動圖書代借代還之館際合作，促進圖書資源使用率以增進教學及研究品質。<br/><br/>二、「中區技專校院校際聯盟」圖書館成員：
+                                </p>
+                                <table>
+                                    <tr>
+                                        <th width="70%">借閱單位</th>
+                                        <th>借閱冊數及期限</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            大同技術學院、中州科技大學、中臺科技大學、仁德醫護管理專科學校、弘光科技大學、吳鳳科技大學、育達商業科技大學、亞太創意技術學院、長庚科技大學(嘉義分部)、建國科技大學、南開科技大學、修平科技大學、國立虎尾科技大學、國立雲林科技大學、國立勤益科技大學、國立臺中技術學院、國立臺中護理專科學校、崇仁醫護管理專科學校、朝陽科技大學、僑光科技大學、嶺東科技大學、環球科技大學，以上22 校大學之圖書(資)館。
+                                        </td>
+                                        <td>借閱冊數5冊，借期21天</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <p>二、申請資格：<br/>
+                                    1.22校正式編制內之教職員工(不含兼任教師)。<br/>
+                                    2.具學籍之學生(不含學分班及推廣教育班學員等)。
+                                </p>
+                                <p>三、館際合作申請方式：<br/>
+                                    <img alt="圖書代借代還服務系統" src="/site/ocit/public/MMO/ocit_image/interlib-ok.jpg" width="90%" height="122" mmoid="647158"/><br/>
+                                    1.點選連結：「<a target="_nwMof" href="http://interloan.yuntech.edu.tw/index.aspx" target="_nwMof">中區技職校院聯合書目查詢及代借代還服務系統</a>」(<a target="_nwMof" href="http://interloan.yuntech.edu.tw/index.aspx" target="_nwMof">http://interloan.yuntech.edu.tw/index.aspx</a>)<br/>
+                                    2.請各校讀者連線至代借代還系統，查詢所需資源所在位置，並於線上填報相關表單，進行書籍的借閱與歸還。<br/>
+                                </p>
+                                <p>
+                                    四、相關辦法與注意事項：<br/>-><a target="_nwMof" href="http://interloan.yuntech.edu.tw/「圖書代借代還」辦法.pdf" target="_nwMof">相關規則下載</a><br/>
+                                    1. 借閱冊數每人以5冊為限，借閱期限為21日 。<br/>
+                                    　　(1)借書日：申請館收到所借圖書後至系統點收的日期。<br/>
+                                    　　(2)還書日：申請館收到讀者還書後至系統歸還的日期。<br/>
+                                    2. 代借代還服務可借資料類型、逾期罰款、遺失書賠款或其他賠償及方式等，均依被申請館之規定。<br/>
+                                    3. CD 光碟附件借閱，由各館自行決定。<br/>
+                                    4. 申請者若有3 次(或以上)到期未取件之情事，運費須由申請者自付，該館得停止其使用代借代還服務權利1 個月。
+                                </p>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- footer Start-->
+            <footer>
+                <div class="container">
+                    <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="下方功能區塊">:::</a>
+                    <div class="footer_info">
+                        <p class="Copyright">
+                            <span class="timeinfo">臨時閱覽證可用張數：56</span><br>
+                            <span class="timeinfo">本日閉館(週一~週六進一樓櫃檯開放)</span><br>
+                            僑光科技大學圖書館版權所有 | COPYRIGHT © 2012 OCU. ALL RIGHTS RESERVED<br>
+                            電話：04-27016855 ext. 8110 | 臺中市407西屯區僑光路100號<br> <span
+                            class="update">更新日期：<em>2021/12/10</em></span>
+                            <span class="counter">瀏覽人次 : <em>985989</em></span>
+                        </p>
+                        <div class="footer_icon">
+                            <ul>
+                                <li><a target="_blank" href="javascript:;" title="另開視窗"> <img
+                                    src="images/aa.png" alt="facebook">
+                                </a></li>
+                                <li><a target="_blank" href="javascript:;" title="另開視窗"> <img
+                                    src="images/qrcode.png" alt="instagram">
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer End -->
+            <a href="javascript:;" class="scrollToTop">回頁首</a>
+            <!-- JQ -->
+            <script src="js/jquery-3.6.0.min.js"></script>
+            <!-- 外掛 plugin js -->
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- ease -->
+            <script src="vendor/slick/slick.min.js "></script>
+            <!-- slick -->
+            <script src="vendor/slick/slick-lightbox.js "></script>
+            <!-- slick lightbox -->
+            <script src="vendor/lazyload/lazyload.js"></script>
+            <!-- lazyload -->
+            <script src="vendor/picturefill/picturefill.min.js" async></script>
+            <!-- picturefill -->
+            <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+            <!-- scrolltable -->
+            <!-- pg_calendar -->
+            <script src="vendor/pg_calendar/js/pignose.calendar.full.js"></script>
+            <!-- hyUI -->
+            <script src="js/hyui.js"></script>
+            <!-- 客製js -->
+            <script src="js/customize.js"></script>
+            <script src="vendor/animate/wow.min.js "></script>
+            <script>
+                wow = new WOW({
+                    animateClass : 'animated',
+                    mobile : false,
+                    offset : 100,
+                    callback : function(box) {
+                        console.log("WOW: animating < " + box.tagName.toLowerCase() + ">")
+                    }
+                });
+                wow.init();
+            </script>
+            <script>
+                $(function() {
+                    $('.calendar').pignoseCalendar(
+                    {
+                        lang : 'ch',
+                        disabledDates : [ '2021-08-02', '2021-08-09', '2021-08-16',
+                        '2021-08-23', '2021-08-30' ]
+                    });
+                });
+            </script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210185250-4"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-210185250-4');
+            </script></div>
+            <script type="text/javascript"></script>
+            <noscript>TAB標籤效果，如不執行不影響您資料瀏覽</noscript>
+        </body>
+        </html>
