@@ -257,9 +257,9 @@ $(function() {
     //bannerSlider
     $('.bannerSlider').slick({
         mobileFirst: true,
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 2000,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,

@@ -23,7 +23,7 @@
     background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .5);
     background-size: 30px 30px;
     box-shadow: none;
-     
+    
 }
 /* 上一則 位置*/
 .slick-prev {
@@ -101,8 +101,8 @@
 /* 點和點的距離 */
 .slick-dots li {
     position: relative;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin: 0 10px;/* 兩點距離 */
     padding: 0;
     cursor: pointer;
@@ -121,8 +121,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: #666;
     opacity: .4;
@@ -135,8 +135,8 @@
 /* hover 過去的點大一些 */
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
     opacity: 1;
-    background: #21baff;
-    box-shadow: 0px 0px 0px 1px #21baff;/* 讓滑過去的點大一些 */
+    background: #2c2260;
+    box-shadow: 0px 0px 0px 1px #2c2260;/* 讓滑過去的點大一些 */
     
 }
 /* focus 過去的點變色 */
@@ -148,5 +148,5 @@
 /* 點 active 的樣子 */
 .slick-dots li.slick-active button:before {
     opacity: 1;
-    background: #21baff;
+    background: #df0079;
 }
