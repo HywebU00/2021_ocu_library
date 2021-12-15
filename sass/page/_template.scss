@@ -86,11 +86,11 @@ body {
         border-radius: 8px;
         padding: 0 50px 20px;
         @include screen('mobile') {
-         padding: 15px; 
-     }
+           padding: 15px; 
+       }
 
- }
- .top_block {
+   }
+   .top_block {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
@@ -245,9 +245,6 @@ body {
                 }
                 h3{
                     background: $lightColor;
-                    @include screen('mobile') {
-                        margin-top: 2em;   
-                    }
                 }
             }
             &:nth-child(3){
@@ -258,10 +255,7 @@ body {
                     background-size: 130px auto;  
                 }
                 h3{
-                    background: $importantColor;
-                    @include screen('mobile') {
-                        margin-top: 2em;   
-                    }    
+                    background: $importantColor; 
                 }
             }
         }
@@ -1550,28 +1544,28 @@ select {
 //manual
 .manual{
     .container{
-     position: relative;
-     height: 180px;
-     overflow: hidden;
-     background: url('../images/manual_bg.jpg')no-repeat left top;
-     background-size: cover;
- }
+       position: relative;
+       height: 180px;
+       overflow: hidden;
+       background: url('../images/manual_bg.jpg')no-repeat left top;
+       background-size: cover;
+   }
 
- .booktext {
-  position: absolute;
-  width: 450px;
-  background: url('../images/manual_bookbg.png')no-repeat left top;
-  width: 392px;
-  height: 278px;
-  left: 35px;
-  top:5px;
-  animation: circle-move 2.4s ease-in-out infinite;
+   .booktext {
+      position: absolute;
+      width: 450px;
+      background: url('../images/manual_bookbg.png')no-repeat left top;
+      width: 392px;
+      height: 278px;
+      left: 35px;
+      top:5px;
+      animation: circle-move 2.4s ease-in-out infinite;
 
-  @include screen('xs_mobile') {
-    background-size: 100% auto;
-    width: 300px;
-    left: 20px;
-}
+      @include screen('xs_mobile') {
+        background-size: 100% auto;
+        width: 300px;
+        left: 20px;
+    }
 }
 
 .word {
@@ -1681,10 +1675,10 @@ select {
 .manual2{
     padding: 0 0 .5em!important;
     .container{
-     position: relative;
-     overflow: hidden;
- }
- .bannerSlider{
+       position: relative;
+       overflow: hidden;
+   }
+   .bannerSlider{
     margin:0;
     @include screen('mobile') {
         height: auto!important;   
