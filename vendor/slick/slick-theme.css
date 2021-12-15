@@ -136,7 +136,7 @@
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
     opacity: 1;
     background: #2c2260;
-    /*box-shadow: 0px 0px 0px 1px #2c2260; 讓滑過去的點大一些 */
+    box-shadow: 0px 0px 0px 1px #2c2260; /*讓滑過去的點大一些 */
     
 }
 /* focus 過去的點變色 */
