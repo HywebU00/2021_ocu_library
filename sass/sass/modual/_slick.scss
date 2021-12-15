@@ -167,7 +167,7 @@
     justify-content: center;
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 0 3px;
     z-index: 9;
     list-style: none;
     box-sizing: border-box;
@@ -188,14 +188,14 @@
 /* ---點的位置、大小、顏色---*/
 .slick-dots {
     /* 位置距離 */
-    bottom: 10px;
+    bottom: -20px;
     li {
         /* 兩點的距離 */
         margin: 0 10px;
         button {
             /* 點的顏色 */
-            background: #666;
-            opacity: .4;
+            background: #fff;
+            opacity: .9;
             width: 10px;
             height: 10px;
             border-radius: 50%;
