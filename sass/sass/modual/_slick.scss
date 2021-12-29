@@ -475,15 +475,18 @@
         }
 
         @include screen('mobile') {
-            // top:0px;
+            top:30%;
             left: 5px;
             background-size: 30px 30px;
             &:hover, &:focus {
               background-size: 30px 30px;  
           }
       }
-  }
-  .slick-next {
+      @include screen('xs_mobile') {
+        top:16%;
+    }
+}
+.slick-next {
     right: 5px;
     top:37%;
     background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
@@ -493,21 +496,25 @@
         background-size: 50px 50px;
     }
     @include screen('mobile') {
-        // top:0px;
+        top:30%;
         right: 5px;
         background-size: 30px 30px;
         &:hover, &:focus {
           background-size: 30px 30px;  
       }
   }
+  @include screen('xs_mobile') {
+    top:16%;
+}
 }
 .img-container {
-    height: 213px;
+    // height: 213px;
     margin: 0;
     background: rgba(0, 0, 0, 0);
+    @include aspect-ratio(5, 1);
     @include screen('mobile') {
-        width: 100%;
-        height: 150px;
+        // width: 100%;
+        // height: 150px;
     }
 
     a {
