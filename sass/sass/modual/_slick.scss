@@ -466,46 +466,52 @@
     }
     .slick-prev {
         left: 5px;
-        top:37%;
+        top:50%;
         background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
         background-size: 50px 50px;
+        margin-top: -25px;
         &:hover, &:focus {
             background: url('../images/slick/icon_arrow_left2_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
             background-size: 50px 50px;
         }
 
         @include screen('mobile') {
-            top:30%;
+            top:50%;
             left: 5px;
             background-size: 30px 30px;
+            margin-top: -30px;
             &:hover, &:focus {
               background-size: 30px 30px;  
           }
       }
-      @include screen('xs_mobile') {
-        top:16%;
-    }
+    //   @include screen('xs_mobile') {
+    //     top:16%;
+    // }
 }
 .slick-next {
     right: 5px;
-    top:37%;
+    top:50%;
     background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
     background-size: 50px 50px;
+    margin-top: -25px;
+
     &:hover, &:focus {
         background: url('../images/slick/icon_arrow_right2_inverse.png') center center no-repeat RGBA(255, 255, 255, 0);
         background-size: 50px 50px;
     }
     @include screen('mobile') {
-        top:30%;
+        top:50%;
         right: 5px;
         background-size: 30px 30px;
+        margin-top: -30px;
+
         &:hover, &:focus {
           background-size: 30px 30px;  
       }
   }
-  @include screen('xs_mobile') {
-    top:16%;
-}
+//   @include screen('xs_mobile') {
+//     top:16%;
+// }
 }
 .img-container {
     // height: 213px;

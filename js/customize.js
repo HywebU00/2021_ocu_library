@@ -254,55 +254,21 @@ $(function() {
         }],
     });
 
-    //bannerSlider
     $('.bannerSlider').slick({
         mobileFirst: true,
         dots: true,
+        arrows: true,
         infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        speed: 500,
         autoplay: true,
-        arrow: true,
+        fade: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
         ease: 'ease',
-        responsive: [{
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
-            breakpoint: 0,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }],
+        customPaging: function(slider, i) {
+            var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+            return $('<button type="button" aria-label="' + title + '"/>').text(title);
+        }
     });
     // cp_photo
     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
