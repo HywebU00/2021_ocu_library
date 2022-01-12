@@ -112,8 +112,11 @@
             padding: .5em 0;
         }
         .img-container {
-            @include aspect-ratio(4, 2);
+            @include aspect-ratio(3.9, 2);
             background: #000;
+            img{
+                object-fit: contain;
+            }
         }
     }
 }

@@ -1,0 +1,908 @@
+<!DOCTYPE html><html xml:lang="zh-TW" lang="zh-TW" xmlns:user="urn:user-namespace-here" xmlns:lastModified="1637326449035" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:hyweb="urn:gip-hyweb-com" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>僑光科技大學圖書館</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/jquery-3.6.0.min.js"></script>
+<link href="images/favicon.png" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="vendor/slick/slick.css">
+<link rel="stylesheet" href="vendor/slick/slick-theme.css">
+<link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.min.css">
+<link rel="stylesheet" href="vendor/animate/animate.css">
+<link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/hyui.css">
+</head>
+<body>
+<a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+<div class="wrapper">
+<header class="header">
+<div class="container">
+<a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方導覽區塊">:::</a>
+<nav class="navigation" role="navigation" aria-label="Site">
+<div class="navlist"><ul>
+                            <li><a href="sp?xdUrl=/wSite/ApBlock/QA.jsp&mp=1">意見交流</a></li>
+                            <li><a href="sitemap">網站導覽</a></li>
+                            <li><a href="https://www.ocu.edu.tw/" target="_blank">僑光首頁</a></li>
+                        </ul></div>
+<div class="nav_reader">
+<button id="login_btn" class="reader_btn-1">讀者登入</button><button class="reader_btn-2" id="loggedin" style="display: none">讀者</button>
+</div>
+</nav>
+<h1>
+	<a title="僑光科技大學圖書館" href="mp?mp=1"><img src="https://lib.ocu.edu.tw/wSite/public/LayoutDesign/1635755416539.png" alt="僑光科技大學圖書館" title="僑光科技大學圖書館"></a>
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav_reader">
+
+	<!-- button class="reader_btn-1">讀者登入</button -->
+	<!--未登入狀態區塊-->
+	<div class="nav_readerArea-1" id="nav_readerArea-1" style="display: none;">
+		<form id="login" name="login" method="post" action="/wSite/sp?xdUrl=/wSite/MemberManager/HyLibSSOLoginService.jsp">
+			<button type="button" class="close">關閉</button>
+			<div class="form_grp">
+				<label for="account">帳號：</label>
+				<input name="account" id="account" type="text" placeholder="請輸入帳號">
+			</div>
+			<div class="form_grp">
+				<label for="passwd">密碼：</label>
+				<input name="passwd" id="passwd" type="password" placeholder="請輸入密碼">
+			</div>
+			<div class="check_grp">
+				<label><input type="checkbox">記住帳號</label>
+			</div>
+			<div class="btn_grp">
+				<button type="button" id="btn_sub" name="btn_sub" class="loginout" >登入</button>
+			</div>
+		</form>
+	</div>
+
+<script>
+$("#login_btn").show();
+$("#loggedin").hide();
+
+$("#btn_sub").click(function() {
+	if ($("#account").val() == '') {
+		alert('請輸入帳號');
+	return  false;
+	} else if ($("#passwd").val() == '') {
+		alert('請輸入密碼');
+	return  false;
+	} else {
+		$("#login").submit();
+	}
+});
+</script>
+
+</div>
+<!--headline End--><nav class="menu">
+<ul>
+<li>
+<a href="np?ctNode=283&mp=1&idPath=290_283" title="館藏查詢">館藏查詢</a>
+<ul>
+<li>
+<a href="https://libwebpac.ocu.edu.tw/webpacIndex.jsp" title="館藏查詢, 另開新視窗." target="_blank">館藏查詢</a>
+</li>
+<li>
+<a href="lp?ctNode=297&mp=1&idPath=290_283_297" title="期刊清單">期刊清單</a>
+</li>
+<li>
+<a href="sp?xdUrl=/wSite/ApBlock/LoginEBOOK.jsp&ctNode=298&mp=1" title="電子書, 另開新視窗." target="_blank">電子書</a>
+</li>
+<li>
+<a href="sp?xdUrl=/wSite/ApBlock/LoginJournal.jsp&ctNode=299&mp=1" title="電子期刊, 另開新視窗." target="_blank">電子期刊</a>
+</li>
+<li>
+<a href="https://cloud.ncl.edu.tw/ocu/" title="論文數位典藏系統, 另開新視窗." target="_blank">論文數位典藏系統</a>
+</li>
+<li>
+<a href="http://203.72.145.196/" title="多媒體影音管理系統, 另開新視窗." target="_blank">多媒體影音管理系統</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="sp?xdUrl=/wSite/ApBlock/LoginERM.jsp&mp=1&ctNode=817&idPath=290_817" title="資料庫檢索, 另開新視窗." target="_blank">資料庫檢索</a>
+</li>
+<li>
+<a href="np?ctNode=285&mp=1&idPath=290_285" title="館際合作">館際合作</a>
+<ul>
+<li>
+<a href="np?ctNode=754&mp=1&idPath=290_285_754" title="中區技職校院「圖書代借代還」館際合作">中區技職校院「圖書代借代還」館際合作</a>
+</li>
+<li>
+<a href="lp?ctNode=826&mp=1&idPath=290_285_826" title="中部大學圖書館聯盟">中部大學圖書館聯盟</a>
+</li>
+<li>
+<a href="np?ctNode=454&mp=1&idPath=290_285_454" title="館際合作說明">館際合作說明</a>
+</li>
+<li>
+<a href="np?ctNode=460&mp=1&idPath=290_285_460" title="全國文獻傳遞服務">全國文獻傳遞服務</a>
+</li>
+<li>
+<a href="lp?ctNode=458&mp=1&idPath=290_285_458" title="中部技專校際聯盟">中部技專校際聯盟</a>
+</li>
+<li>
+<a href="http://sticnet.stpi.narl.org.tw/unicatc/ttswebx?@0:0:1:unicatq" title="全國期刊聯合目錄, 另開新視窗." target="_blank">全國期刊聯合目錄</a>
+</li>
+<li>
+<a href="https://unicat.stpi.narl.org.tw/unicat2c/unicat2tp?@@0.23524816255912206" title="電子期刊聯合目錄, 另開新視窗." target="_blank">電子期刊聯合目錄</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="np?ctNode=286&mp=1&idPath=290_286" title="讀者服務">讀者服務</a>
+<ul>
+<li>
+<a href="MemberManager/hylibForward.jsp?rdurl=personalization/personal.jsp&mp=1" title="個人資料查詢及借閱">個人資料查詢及借閱</a>
+</li>
+<li>
+<a href="np?ctNode=328&mp=1&idPath=290_286_328" title="圖書館利用指引">圖書館利用指引</a>
+</li>
+<li>
+<a href="http://203.72.145.166/indexRecommand.do" title="推薦書刊, 另開新視窗." target="_blank">推薦書刊</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="np?ctNode=287&mp=1&idPath=290_287" title="網路資源">網路資源</a>
+<ul>
+<li>
+<a href="lp?ctNode=441&mp=1&idPath=290_287_441" title="圖書館連結">圖書館連結</a>
+</li>
+<li>
+<a href="lp?ctNode=442&mp=1&idPath=290_287_442" title="升學與就業資訊">升學與就業資訊</a>
+</li>
+<li>
+<a href="lp?ctNode=447&mp=1&idPath=290_287_447" title="留學與遊學資訊">留學與遊學資訊</a>
+</li>
+<li>
+<a href="lp?ctNode=448&mp=1&idPath=290_287_448" title="參考工具資源">參考工具資源</a>
+</li>
+<li>
+<a href="http://ndltd.ncl.edu.tw/" title="博碩士資源, 另開新視窗." target="_blank">博碩士資源</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="np?ctNode=295&mp=1&idPath=290_295" title="圖書館導覽">圖書館導覽</a>
+<ul>
+<li>
+<a href="lp?ctNode=433&mp=1&idPath=290_295_433" title="圖書館簡介">圖書館簡介</a>
+</li>
+<li>
+<a href="lp?ctNode=827&mp=1&idPath=290_295_827" title="圖書館影片">圖書館影片</a>
+</li>
+<li>
+<a href="lp?ctNode=434&mp=1&idPath=290_295_434" title="圖資委員會會議記錄">圖資委員會會議記錄</a>
+</li>
+<li>
+<a href="lp?ctNode=435&mp=1&idPath=290_295_435" title="規則與辦法">規則與辦法</a>
+</li>
+<li>
+<a href="lp?ctNode=443&mp=1&idPath=290_295_443" title="各式表單下載">各式表單下載</a>
+</li>
+<li>
+<a href="np?ctNode=436&mp=1&idPath=290_295_436" title="樓層簡介">樓層簡介</a>
+</li>
+<li>
+<a href="np?ctNode=856&mp=1&idPath=290_295_856" title="圖書館配置圖">圖書館配置圖</a>
+</li>
+<li>
+<a href="http://w3.ocu.edu.tw/lib/memberslib.htm" title="組織成員, 另開新視窗." target="_blank">組織成員</a>
+</li>
+<li>
+<a href="sp?xdUrl=/wSite/ApBlock/GoogleCalendar.jsp&ctNode=438&mp=1" title="開放時間, 另開新視窗." target="_blank">開放時間</a>
+</li>
+<li>
+<a href="np?ctNode=840&mp=1&idPath=290_295_840" title="內控作業流程">內控作業流程</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="np?ctNode=775&mp=1&idPath=290_775" title="學報出版">學報出版</a>
+<ul>
+<li>
+<a href="np?ctNode=776&mp=1&idPath=290_775_776" title="徵稿消息">徵稿消息</a>
+</li>
+<li>
+<a href="np?ctNode=777&mp=1&idPath=290_775_777" title="學報法規">學報法規</a>
+</li>
+<li>
+<a href="np?ctNode=778&mp=1&idPath=290_775_778" title="表格">表格</a>
+</li>
+<li>
+<a href="lp?ctNode=779&mp=1&idPath=290_775_779" title="會議記錄">會議記錄</a>
+</li>
+<li>
+<a href="np?ctNode=782&mp=1&idPath=290_775_782" title="各期目錄">各期目錄</a>
+</li>
+<li>
+<a href="np?ctNode=781&mp=1&idPath=290_775_781" title="聯絡我們">聯絡我們</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="np?ctNode=843&mp=1&idPath=290_843" title="智財權">智財權</a>
+<ul>
+<li>
+<a href="np?ctNode=844&mp=1&idPath=290_843_844" title="公告及宣導">公告及宣導</a>
+</li>
+<li>
+<a href="np?ctNode=845&mp=1&idPath=290_843_845" title="智慧財產權">智慧財產權</a>
+</li>
+<li>
+<a href="np?ctNode=846&mp=1&idPath=290_843_846" title="專利法">專利法</a>
+</li>
+<li>
+<a href="np?ctNode=847&mp=1&idPath=290_843_847" title="商標法">商標法</a>
+</li>
+<li>
+<a href="np?ctNode=848&mp=1&idPath=290_843_848" title="著作權法">著作權法</a>
+</li>
+<li>
+<a href="lp?ctNode=849&mp=1&idPath=290_843_849" title="文章宣導">文章宣導</a>
+</li>
+<li>
+<a href="lp?ctNode=850&mp=1&idPath=290_843_850" title="相關案例">相關案例</a>
+</li>
+<li>
+<a href="lp?ctNode=853&mp=1&idPath=290_843_853" title="智財網站連結">智財網站連結</a>
+</li>
+<li>
+<a href="np?ctNode=852&mp=1&idPath=290_843_852" title="智財 Q&A">智財 Q&A</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<noscript>TAB標籤功能，如不執行不影響您資料瀏覽</noscript> 
+
+
+
+
+  
+
+
+<script>
+function goSearch(){
+	
+	var str = $(".search :input[name=inquiry]").val();
+
+	if($(".search #selectSample").val() == 'webpacsearch'){
+		if(str==''){ 
+			$(".search :input[name=inquiry]").each(function(){
+				str = $(this).val();  
+				if(str!='')return false;
+			});
+		}
+		window.open("MemberManager/hylibForward.jsp?rdurl=" + encodeURIComponent("bookSearchList.do?search_field=FullText&search_input=" + encodeURIComponent(str)),"_blank");
+		//window.open("https://libwebpac.ocu.edu.tw/bookSearchList.do?search_field=FullText&search_input="+encodeURI(str),"_blank");
+	} else if($(".search #selectSample").val() == 'erm'){
+		if(str==''){ 
+			$(".search :input[name=inquiry]").each(function(){
+				str = $(this).val();  
+				if(str!='') return false;
+			});
+		}
+		
+		window.open("http://203.72.145.190/ocuerm/index.jsp","_blank");
+		
+	}
+}
+</script>
+<!-- Search Start -->
+<!-- 館藏查詢 樣式一 -->
+<div class="search">
+	<div class="form_grp">
+		<form action="">
+			<label for="selectSample">選擇查詢項目</label>
+			<select name="selectSample" id="selectSample" aria-labelledby="選擇查詢項目">
+				<option value="webpacsearch" aria-labelledby="館藏查詢">館藏目錄</option>
+				<option value="erm" aria-labelledby="電子資源">電子資源</option>
+			</select>
+			<label for="inquiry">搜尋</label>
+			<input name="inquiry" id="inquiry" type="text" placeholder="請輸入關鍵字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容">
+			<button name="btnQuery" id="btnQuery" type="button" onclick="goSearch();" class="btn btn-search">查詢</button>
+		</form>
+	</div>
+</div>
+<!-- Search End --></div>
+</header>
+<div id="zone.SideBarLeft"></div>
+<div id="center" class="main mp">
+<div class="accesskey">
+<a href="#" accesskey="C" title="中央內容區塊">:::</a>
+</div>
+
+
+
+
+
+
+
+
+<!--  兩欄樣式 -->
+<section class="flex-8-4">
+	<div class="container">
+		<div class="Flex-set">
+			<div class="col reader_service wow fadeInLeft">
+				<h2>系所資源指引</h2>
+				<section class="flex-3">
+					<div class="Flex-set">
+						
+						<div class="col">
+							<h3>商學與管理學院</h3>
+							<ul>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=商學與管理學院&deptName=財務金融系(研究所)&bcode=001&mp=1" alt="財務金融系(研究所)(另開新頁)" target="_blank">財務金融系(研究所)</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=商學與管理學院&deptName=企業管理系(含研究所)&bcode=003&mp=1" alt="企業管理系(含研究所)(另開新頁)" target="_blank">企業管理系(含研究所)</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=商學與管理學院&deptName=國際貿易系&bcode=004&mp=1" alt="國際貿易系(另開新頁)" target="_blank">國際貿易系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=商學與管理學院&deptName=行銷與流通管理系&bcode=005&mp=1" alt="行銷與流通管理系(另開新頁)" target="_blank">行銷與流通管理系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=商學與管理學院&deptName=財經法律系&bcode=006&mp=1" alt="財經法律系(另開新頁)" target="_blank">財經法律系</a></li>
+								
+							</ul>
+						</div>
+					
+						<div class="col">
+							<h3>觀光與餐旅學院</h3>
+							<ul>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=觀光與餐旅學院&deptName=餐飲管理系&bcode=009&mp=1" alt="餐飲管理系(另開新頁)" target="_blank">餐飲管理系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=觀光與餐旅學院&deptName=觀光與休閒事業管理系&bcode=010&mp=1" alt="觀光與休閒事業管理系(另開新頁)" target="_blank">觀光與休閒事業管理系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=觀光與餐旅學院&deptName=旅館與會展管理系&bcode=011&mp=1" alt="旅館與會展管理系(另開新頁)" target="_blank">旅館與會展管理系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=觀光與餐旅學院&deptName=應用英語系&bcode=012&mp=1" alt="應用英語系(另開新頁)" target="_blank">應用英語系</a></li>
+								
+							</ul>
+						</div>
+					
+						<div class="col">
+							<h3>設計與資訊學院</h3>
+							<ul>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=設計與資訊學院&deptName=資訊科技系&bcode=015&mp=1" alt="資訊科技系(另開新頁)" target="_blank">資訊科技系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=設計與資訊學院&deptName=電腦輔助工業設計系&bcode=021&mp=1" alt="電腦輔助工業設計系(另開新頁)" target="_blank">電腦輔助工業設計系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=設計與資訊學院&deptName=多媒體與遊戲設計系&bcode=018&mp=1" alt="多媒體與遊戲設計系(另開新頁)" target="_blank">多媒體與遊戲設計系</a></li>
+								
+								<li><a href="sp?xdUrl=/wSite/ApBlock/BookList.jsp?collegeName=設計與資訊學院&deptName=生活創意設計系&bcode=019&mp=1" alt="生活創意設計系(另開新頁)" target="_blank">生活創意設計系</a></li>
+								
+							</ul>
+						</div>
+					
+					</div>
+				</section>
+			</div>
+			<!-- 最新消息 -->
+			<div class="col latest_news wow fadeInRight">
+				<div class="tabSet">
+					<section class="tabs">
+					
+						<button id="newsLibSelect" class="tabItem active">本館訊息</button>
+						<div id="newsAll10" class="tabContent">
+							<ul>
+								
+								<li><time>2022/01/01</time><a href="ct?ctNode=317&mp=1&xItem=647908" 2022年資料庫啟用清單 >2022年資料庫啟用清單</a></li>
+								
+								<li><time>2021/12/24</time><a href="ct?ctNode=317&mp=1&xItem=647904" 【圖書館活動】(日間部)大一新生圖書館利用教育活動滿意度調查暨抽獎 >【圖書館活動】(日間部)大一新生圖書館利用教育活動滿意度調查暨抽獎</a></li>
+								
+								<li><time>2021/12/23</time><a href="ct?ctNode=317&mp=1&xItem=647903" 【徵才】圖書館誠徵臨時工讀生數名 >【徵才】圖書館誠徵臨時工讀生數名</a></li>
+								
+								<li><time>2021/12/13</time><a href="ct?ctNode=317&mp=1&xItem=647869" 圖書館新網頁於110年12月13日(一)正式上線 >圖書館新網頁於110年12月13日(一)正式上線</a></li>
+								
+								<li><time>2021/11/12</time><a href="ct?ctNode=317&mp=1&xItem=647747" 【1112圖書館公告】 因應最新二級疫情警戒，圖書館應變措施 >【1112圖書館公告】 因應最新二級疫情警戒，圖書館應變措施</a></li>
+								
+							</ul> 
+							<div class="more">
+								<a href="lp?ctNode=317&mp=1&idPath=&xq_xCat=10&mp=1">看更多本館訊息</a>
+							</div>
+							 
+						</div>
+						<script> 
+							$("#newsLibSelect").change(function(){
+								$("#newsAll10").load("ApBlock/ajaxNews.jsp?topcat=10"); 
+							}) 
+						</script>
+						
+						<button id="newsLibSelect" class="tabItem ">活動公告</button>
+						<div id="newsAll20" class="tabContent">
+							<ul>
+								
+								<li><time>2022/01/07</time><a href="ct?ctNode=317&mp=1&xItem=647909" 國立臺灣圖書館「館藏臺灣學研究書展－行動展覽館111年7-12月檔期開放免費提供申請借展」 >國立臺灣圖書館「館藏臺灣學研究書展－行動展覽館111年7-12月檔期開放免費提供申請借展」</a></li>
+								
+								<li><time>2022/01/04</time><a href="ct?ctNode=317&mp=1&xItem=647906" 東吳翻譯學報《譒》第四期徵稿 >東吳翻譯學報《譒》第四期徵稿</a></li>
+								
+								<li><time>2022/01/04</time><a href="ct?ctNode=317&mp=1&xItem=647907" 國立臺灣大學圖書館建置「研究資源管理學習指引」，開放各界利用， >國立臺灣大學圖書館建置「研究資源管理學習指引」，開放各界利用，</a></li>
+								
+								<li><time>2021/12/06</time><a href="ct?ctNode=317&mp=1&xItem=647858" 國立臺灣圖書館訂於111年1月15日至12月17日間辦理視障者電影聽賞活動 >國立臺灣圖書館訂於111年1月15日至12月17日間辦理視障者電影聽賞活動</a></li>
+								
+								<li><time>2021/11/04</time><a href="ct?ctNode=317&mp=1&xItem=647691" 臺中市立圖書館11月2日辦理「紙上寶石展/藏書票展」系列活動(另開新視窗) target='_blank'>臺中市立圖書館11月2日辦理「紙上寶石展/藏書票展」系列活動</a></li>
+								
+							</ul> 
+							<div class="more">
+								<a href="lp?ctNode=317&mp=1&idPath=&xq_xCat=20&mp=1">看更多活動公告</a>
+							</div>
+							 
+						</div>
+						<script> 
+							$("#newsLibSelect").change(function(){
+								$("#newsAll20").load("ApBlock/ajaxNews.jsp?topcat=20"); 
+							}) 
+						</script>
+						
+
+					</section>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- section class="manual wow fadeInUp" data-wow-delay=".3s">
+	<div class="container" style="background: url('images/manual_bg.jpg')no-repeat left top;background-size: cover;">
+		<div class="booktext">
+			<div class="word1">因為閱讀</div>
+			<div class="word belize">我打開通往世界之窗</div>
+			<div class="word2">圖書館使用手冊線上版</div>
+		</div>
+	</div>
+	<div class="more"><a href="#">看更多</a></div>
+</section -->
+
+
+
+
+
+
+<!--bannerSlider star-->
+<section class="manual2 wow fadeInUp" data-wow-delay=".3s">
+	<div class="container">
+		<div class="bannerSlider wow fadeInUp">
+			
+			<div class="img-container">
+				<a href="#" title="【2022年新書展】冬日靜好，從「新」開卷，迎新年(另開新視窗)" target='_blank'>
+					<img data-lazy="https://lib.ocu.edu.tw/wSite/public/Data/f1641878799632.jpg" class="fill" alt="【2022年新書展】冬日靜好，從「新」開卷，迎新年(另開新視窗)" class="fill">
+				</a>
+			</div>
+			
+			<div class="img-container">
+				<a href="#" title="圖書館使用手冊線上版(另開新視窗)" target='_blank'>
+					<img data-lazy="https://lib.ocu.edu.tw/wSite/public/Data/2012-09-06-B-reading-jpg-ok.jpg" class="fill" alt="圖書館使用手冊線上版(另開新視窗)" class="fill">
+				</a>
+			</div>
+			
+			<div class="img-container">
+				<a href="#" title="圖書館數位認證課程~有證照，不怕沒人罩(另開新視窗)" target='_blank'>
+					<img data-lazy="https://lib.ocu.edu.tw/wSite/public/Data/e-Class-1010917-ok.jpg" class="fill" alt="圖書館數位認證課程~有證照，不怕沒人罩(另開新視窗)" class="fill">
+				</a>
+			</div>
+			
+		</div>
+		<div class="more"><a href="sp?xdUrl=/wSite/ApBlock/Active.jsp&mp=1" target="_blank">看更多</a></div>
+	</div>
+</section>
+<!--bannerSlider End-->
+
+
+
+
+
+
+
+<section class="book_info wow fadeInUp">
+	<div class="container">
+		<h2>新書通報</h2>
+		<div class="bookSlider">
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302800" title="美感的意識形態(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986477663.jpg" alt="美感的意識形態(另開新視窗)" />
+					</div>
+					<div class="book_name">美感的意識形態</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302276" title="性格心理學:理論與研究(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986566892.jpg" alt="性格心理學:理論與研究(另開新視窗)" />
+					</div>
+					<div class="book_name">性格心理學:理論與研究</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302129" title="人工智慧相關法律議題芻議(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957860715.jpg" alt="人工智慧相關法律議題芻議(另開新視窗)" />
+					</div>
+					<div class="book_name">人工智慧相關法律議題芻議</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302191" title="防制洗錢與打擊資恐法規與實務(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957923574.jpg" alt="防制洗錢與打擊資恐法規與實務(另開新視窗)" />
+					</div>
+					<div class="book_name">防制洗錢與打擊資恐法規與實務</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302809" title="22款活腦折紙遊戲(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986381202.jpg" alt="22款活腦折紙遊戲(另開新視窗)" />
+					</div>
+					<div class="book_name">22款活腦折紙遊戲</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302945" title="軟體工程:理論與實務應用(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986502108.jpg" alt="軟體工程:理論與實務應用(另開新視窗)" />
+					</div>
+					<div class="book_name">軟體工程:理論與實務應用</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302630" title="專業鐵板燒主廚必學:極品牛排調理技法(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986475120.jpg" alt="專業鐵板燒主廚必學:極品牛排調理技法(另開新視窗)" />
+					</div>
+					<div class="book_name">專業鐵板燒主廚必學:極品牛排調理技法</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302290" title="台灣老人社會工作:理論與實務(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986566861.jpg" alt="台灣老人社會工作:理論與實務(另開新視窗)" />
+					</div>
+					<div class="book_name">台灣老人社會工作:理論與實務</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302421" title="是獨立老,不是孤獨老(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986969187.jpg" alt="是獨立老,不是孤獨老(另開新視窗)" />
+					</div>
+					<div class="book_name">是獨立老,不是孤獨老</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302527" title="取巧Excel:效率快一步的實用密技(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://www.books.com.tw/image/getImage?i=https://addons.books.com.tw/G/prod/comingsoon_sq.jpg&v=50617f0a&w=348&h=348" alt="取巧Excel:效率快一步的實用密技(另開新視窗)" />
+					</div>
+					<div class="book_name">取巧Excel:效率快一步的實用密技</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302101" title="從新聞案例輕鬆瞭解車禍責任與理賠(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957511092.jpg" alt="從新聞案例輕鬆瞭解車禍責任與理賠(另開新視窗)" />
+					</div>
+					<div class="book_name">從新聞案例輕鬆瞭解車禍責任與理賠</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302188" title="抓住信用的價值與風險:銀行信用貸款的價值衡量與迷思(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986399127.jpg" alt="抓住信用的價值與風險:銀行信用貸款的價值衡量與迷思(另開新視窗)" />
+					</div>
+					<div class="book_name">抓住信用的價值與風險:銀行信用貸款的價值衡量與迷思</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302351" title="世界.華夏.臺灣:平行.交纏和分合的過程(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957146431.jpg" alt="世界.華夏.臺灣:平行.交纏和分合的過程(另開新視窗)" />
+					</div>
+					<div class="book_name">世界.華夏.臺灣:平行.交纏和分合的過程</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302897" title="設計的鐵則(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986312561.jpg" alt="設計的鐵則(另開新視窗)" />
+					</div>
+					<div class="book_name">設計的鐵則</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302669" title="統計學:以SPSS for Windows為例(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986430441.jpg" alt="統計學:以SPSS for Windows為例(另開新視窗)" />
+					</div>
+					<div class="book_name">統計學:以SPSS for Windows為例</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302140" title="行政法概要(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957511015.jpg" alt="行政法概要(另開新視窗)" />
+					</div>
+					<div class="book_name">行政法概要</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302950" title="哲學超圖解,中國.日本.歐美當代哲學篇 中西72哲人x190哲思, 600幅可愛...(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986384344.jpg" alt="哲學超圖解,中國.日本.歐美當代哲學篇 中西72哲人x190哲思, 600幅可愛...(另開新視窗)" />
+					</div>
+					<div class="book_name">哲學超圖解,中國.日本.歐美當代哲學篇 中西72哲人x190哲思, 600幅可愛...</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302236" title="企業概論(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957436553.jpg" alt="企業概論(另開新視窗)" />
+					</div>
+					<div class="book_name">企業概論</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302754" title="圖解汽車原理與構造(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986370195.jpg" alt="圖解汽車原理與構造(另開新視窗)" />
+					</div>
+					<div class="book_name">圖解汽車原理與構造</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302117" title="近現代中國國際合作面面觀(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986963048.jpg" alt="近現代中國國際合作面面觀(另開新視窗)" />
+					</div>
+					<div class="book_name">近現代中國國際合作面面觀</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302642" title="觀光學實務與理論(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986430173.jpg" alt="觀光學實務與理論(另開新視窗)" />
+					</div>
+					<div class="book_name">觀光學實務與理論</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302281" title="長期照顧:產業發展與趨勢(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986955801.jpg" alt="長期照顧:產業發展與趨勢(另開新視窗)" />
+					</div>
+					<div class="book_name">長期照顧:產業發展與趨勢</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302828" title="跟著實務學習HTML5,CSS3,JavaScript,jQuery,jQuer...(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986502014.jpg" alt="跟著實務學習HTML5,CSS3,JavaScript,jQuery,jQuer...(另開新視窗)" />
+					</div>
+					<div class="book_name">跟著實務學習HTML5,CSS3,JavaScript,jQuery,jQuer...</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302254" title="貨幣銀行學(含概要):重點整理X精選考題(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/986/986564415.jpg" alt="貨幣銀行學(含概要):重點整理X精選考題(另開新視窗)" />
+					</div>
+					<div class="book_name">貨幣銀行學(含概要):重點整理X精選考題</div>
+				</a>
+			</div>
+			
+			<div class="book_wrap">
+				<a href="https://libwebpac.ocu.edu.tw/bookDetail.do?id=302488" title="流通管理概論:精華理論與本土案例(另開新視窗)" target='_blank'>
+					<div class="img-container">
+						<img src="http://cdnec.sanmin.com.tw/product_images/957/957119960.jpg" alt="流通管理概論:精華理論與本土案例(另開新視窗)" />
+					</div>
+					<div class="book_name">流通管理概論:精華理論與本土案例</div>
+				</a>
+			</div>
+			
+			<!--bookslider End-->
+			<!--tabContent END-->
+		</div>
+		<div class="more">
+			<a href="https://libwebpac.ocu.edu.tw/newbookList.do" title="更多新書(另開新視窗)" target="_blank">更多新書</a>
+		</div>
+
+		<br>
+		
+		<h2>更多資源</h2>
+		<!--moreinfoSlider star-->
+		<div class="moreinfoSlider">
+		
+	    	<div class="book_wrap">
+	    		<a href="http://203.72.145.196/index.php" title="多媒體影音管理平台（限校內觀看）(另開新視窗)" target='_blank'>
+		            <div class="img-container">
+		            	<img src="https://lib.ocu.edu.tw/wSite/public/Data/f1637223073317.png" alt="多媒體影音管理平台（限校內觀看）(另開新視窗)" />
+		            </div>
+		            <div class="book_name">多媒體影音管理平台（限校內觀看）</div>
+		        </a>
+		    </div>
+		
+	    	<div class="book_wrap">
+	    		<a href="sp?xdUrl=/wSite/ApBlock/LoginERM.jsp" title="身份認證分析系統(另開新視窗)" target='_blank'>
+		            <div class="img-container">
+		            	<img src="https://lib.ocu.edu.tw/wSite/public/Data/f1637223194553.png" alt="身份認證分析系統(另開新視窗)" />
+		            </div>
+		            <div class="book_name">身份認證分析系統</div>
+		        </a>
+		    </div>
+		
+	    	<div class="book_wrap">
+	    		<a href="http://oculib.blogspot.com/" title="圖書館部落格(另開新視窗)" target='_blank'>
+		            <div class="img-container">
+		            	<img src="https://lib.ocu.edu.tw/wSite/public/Data/f1637223271191.png" alt="圖書館部落格(另開新視窗)" />
+		            </div>
+		            <div class="book_name">圖書館部落格</div>
+		        </a>
+		    </div>
+		
+	    	<div class="book_wrap">
+	    		<a href="https://vr.ocu.tw/library-v1/" title="720度導覽系統（建置中）(另開新視窗)" target='_blank'>
+		            <div class="img-container">
+		            	<img src="https://lib.ocu.edu.tw/wSite/public/Data/f1637315739072.png" alt="720度導覽系統（建置中）(另開新視窗)" />
+		            </div>
+		            <div class="book_name">720度導覽系統（建置中）</div>
+		        </a>
+		    </div>
+		
+	    	<div class="book_wrap">
+	    		<a href="http://lib.ocu.edu.tw/wSite/sp?xdUrl=/wSite/ApBlock/GoogleCalendar.jsp&mp=1&ctNode=438&idPath=" title="行事曆(另開新視窗)" target='_blank'>
+		            <div class="img-container">
+		            	<img src="https://lib.ocu.edu.tw/wSite/public/Data/f1637315899241.png" alt="行事曆(另開新視窗)" />
+		            </div>
+		            <div class="book_name">行事曆</div>
+		        </a>
+		    </div>
+		
+	    	<div class="book_wrap">
+	    		<a href="https://lib.ocu.edu.tw/wSite/ct?xItem=647732&ctNode=871&mp=1&previewToken=9350f7c441f9fa5ea0c05182052d4c39" title="館訊（測試中）(另開新視窗)" target='_blank'>
+		            <div class="img-container">
+		            	<img src="https://lib.ocu.edu.tw/wSite/public/Data/f1637223463867.png" alt="館訊（測試中）(另開新視窗)" />
+		            </div>
+		            <div class="book_name">館訊（測試中）</div>
+		        </a>
+		    </div>
+		
+		</div>
+		<!--moreinfoSlider End-->
+		<div class="more">
+			<a href="lp?ctNode=866&mp=1&idPath=">更多資源</a>
+		</div>
+	</div>
+</section></div>
+<section class="fatfooter">
+
+
+
+
+
+
+
+<!-- footer Start-->
+<footer>
+	<div class="container">
+		<a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="下方功能區塊">:::</a>
+		<div class="footer_info">
+			<p class="Copyright">
+				<!-- span class="timeinfo">本日開館(8:10-21:30)</span><br>
+				<span class="timeinfo">臨時閱覽證可用張數:25 (目前防疫期間，不開放校外人士入館。)</span><br -->
+				僑光科技大學圖書館版權所有 | COPYRIGHT © 2021 OCU. ALL RIGHTS RESERVED<br>
+				電話：04-27016855 ext. 8110 | 臺中市407西屯區僑光路100號<br> <span
+					class="update">更新日期：<em>2022/01/11</em></span>
+				
+				<span class="counter">瀏覽人次 : <em>1012878</em></span>
+			</p>
+			<div class="footer_icon">
+				<ul>
+					<li><a target="_blank" href="javascript:;" title="另開視窗"> <img
+							src="images/aa.png" alt="facebook">
+					</a></li>
+					<li><a target="_blank" href="javascript:;" title="另開視窗"> <img
+							src="images/qrcode.png" alt="instagram">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- footer End -->
+
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<!-- JQ -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 外掛 plugin js -->
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- ease -->
+<script src="vendor/slick/slick.min.js "></script>
+<!-- slick -->
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- slick lightbox -->
+<script src="vendor/lazyload/lazyload.js"></script>
+<!-- lazyload -->
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<!-- picturefill -->
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+<!-- scrolltable -->
+<!-- pg_calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.js"></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+<script src="vendor/animate/wow.min.js "></script>
+<script>
+	wow = new WOW({
+		animateClass : 'animated',
+		mobile : false,
+		offset : 100,
+		callback : function(box) {
+			console.log("WOW: animating < " + box.tagName.toLowerCase() + ">")
+		}
+	});
+	wow.init();
+</script>
+<script>
+	$(function() {
+		$('.calendar').pignoseCalendar(
+				{
+					lang : 'ch',
+					disabledDates : [ '2021-08-02', '2021-08-09', '2021-08-16',
+							'2021-08-23', '2021-08-30' ]
+				});
+	});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210185250-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-210185250-4');
+</script></section>
+</div>
+</body>
+</html>

@@ -253,7 +253,7 @@ $(function() {
             }
         }],
     });
-
+    //bannerSlider
     $('.bannerSlider').slick({
         mobileFirst: true,
         dots: true,
