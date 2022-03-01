@@ -1,0 +1,950 @@
+<!DOCTYPE html><html xml:lang="zh-TW" lang="zh-TW" xmlns:user="urn:user-namespace-here" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:hyweb="urn:gip-hyweb-com" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>僑光科技大學圖書館-網站導覽</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<link href="images/favicon.png" rel="icon" type="image/x-icon">
+	<link rel="stylesheet" href="vendor/slick/slick.css">
+	<link rel="stylesheet" href="vendor/slick/slick-theme.css">
+	<link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.min.css">
+	<link rel="stylesheet" href="vendor/animate/animate.css">
+	<link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/hyui.css">
+</head>
+<body>
+	<a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+	<div class="wrapper">
+		<header class="header innerheader">
+			<div class="container">
+				<a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方導覽區塊">:::</a>
+				<nav class="navigation" role="navigation" aria-label="Site">
+					<div class="navlist"><ul>
+						<li><a href="sp?xdUrl=/wSite/ApBlock/QA.jsp&mp=1">意見交流</a></li>
+						<li><a href="sitemap">網站導覽</a></li>
+						<li><a href="https://www.ocu.edu.tw/" target="_blank">僑光首頁</a></li>
+					</ul></div>
+					<div class="nav_reader">
+						<button id="login_btn" class="reader_btn-1">讀者登入</button><button class="reader_btn-2" id="loggedin" style="display: none">讀者</button>
+					</div>
+				</nav>
+				<h1>
+					<a title="僑光科技大學圖書館" href="mp?mp=1"><img src="https://lib.ocu.edu.tw/wSite/public/LayoutDesign/1635755498761.png" alt="僑光科技大學圖書館" title="僑光科技大學圖書館"></a>
+				</h1>
+
+
+
+
+
+
+
+
+
+
+
+				<div class="nav_reader">
+
+					<!-- button class="reader_btn-1">讀者登入</button -->
+					<!--未登入狀態區塊-->
+					<div class="nav_readerArea-1" id="nav_readerArea-1" style="display: none;">
+						<form id="login" name="login" method="post" action="/wSite/sp?xdUrl=/wSite/MemberManager/HyLibSSOLoginService.jsp">
+							<button type="button" class="close">關閉</button>
+							<div class="form_grp">
+								<label for="account">帳號：</label>
+								<input name="account" id="account" type="text" placeholder="請輸入帳號">
+							</div>
+							<div class="form_grp">
+								<label for="passwd">密碼：</label>
+								<input name="passwd" id="passwd" type="password" placeholder="請輸入密碼">
+							</div>
+							<div class="check_grp">
+								<label><input type="checkbox">記住帳號</label>
+							</div>
+							<div class="btn_grp">
+								<button type="button" id="btn_sub" name="btn_sub" class="loginout" >登入</button>
+							</div>
+						</form>
+					</div>
+
+					<script>
+						$("#login_btn").show();
+						$("#loggedin").hide();
+
+						$("#btn_sub").click(function() {
+							if ($("#account").val() == '') {
+								alert('請輸入帳號');
+								return  false;
+							} else if ($("#passwd").val() == '') {
+								alert('請輸入密碼');
+								return  false;
+							} else {
+								$("#login").submit();
+							}
+						});
+					</script>
+
+				</div>
+				<!--headline End--><nav class="menu">
+					<ul>
+						<li>
+							<a href="np?ctNode=283&mp=1&idPath=290_283" title="館藏查詢">館藏查詢</a>
+							<ul>
+								<li>
+									<a href="https://libwebpac.ocu.edu.tw/webpacIndex.jsp" title="館藏查詢, 另開新視窗." target="_blank">館藏查詢</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=297&mp=1&idPath=290_283_297" title="期刊清單">期刊清單</a>
+								</li>
+								<li>
+									<a href="sp?xdUrl=/wSite/ApBlock/LoginEBOOK.jsp&ctNode=298&mp=1" title="電子書, 另開新視窗." target="_blank">電子書</a>
+								</li>
+								<li>
+									<a href="sp?xdUrl=/wSite/ApBlock/LoginJournal.jsp&ctNode=299&mp=1" title="電子期刊, 另開新視窗." target="_blank">電子期刊</a>
+								</li>
+								<li>
+									<a href="https://cloud.ncl.edu.tw/ocu/" title="論文數位典藏系統, 另開新視窗." target="_blank">論文數位典藏系統</a>
+								</li>
+								<li>
+									<a href="http://203.72.145.196/" title="多媒體影音管理系統(限校內觀看), 另開新視窗." target="_blank">多媒體影音管理系統(限校內觀看)</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="sp?xdUrl=/wSite/ApBlock/LoginERM.jsp&mp=1&ctNode=817&idPath=290_817" title="資料庫檢索, 另開新視窗." target="_blank">資料庫檢索</a>
+						</li>
+						<li>
+							<a href="np?ctNode=285&mp=1&idPath=290_285" title="館際合作">館際合作</a>
+							<ul>
+								<li>
+									<a href="np?ctNode=754&mp=1&idPath=290_285_754" title="中區技職校院「圖書代借代還」館際合作">中區技職校院「圖書代借代還」館際合作</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=826&mp=1&idPath=290_285_826" title="中部大學圖書館聯盟">中部大學圖書館聯盟</a>
+								</li>
+								<li>
+									<a href="np?ctNode=454&mp=1&idPath=290_285_454" title="館際合作說明">館際合作說明</a>
+								</li>
+								<li>
+									<a href="np?ctNode=460&mp=1&idPath=290_285_460" title="全國文獻傳遞服務">全國文獻傳遞服務</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=458&mp=1&idPath=290_285_458" title="中部技專校際聯盟">中部技專校際聯盟</a>
+								</li>
+								<li>
+									<a href="http://sticnet.stpi.narl.org.tw/unicatc/ttswebx?@0:0:1:unicatq" title="全國期刊聯合目錄, 另開新視窗." target="_blank">全國期刊聯合目錄</a>
+								</li>
+								<li>
+									<a href="https://unicat.stpi.narl.org.tw/unicat2c/unicat2tp?@@0.23524816255912206" title="電子期刊聯合目錄, 另開新視窗." target="_blank">電子期刊聯合目錄</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="np?ctNode=286&mp=1&idPath=290_286" title="讀者服務">讀者服務</a>
+							<ul>
+								<li>
+									<a href="MemberManager/hylibForward.jsp?rdurl=personalization/personal.jsp&mp=1" title="個人資料查詢及借閱">個人資料查詢及借閱</a>
+								</li>
+								<li>
+									<a href="np?ctNode=328&mp=1&idPath=290_286_328" title="圖書館利用指引">圖書館利用指引</a>
+								</li>
+								<li>
+									<a href="http://203.72.145.166/indexRecommand.do" title="推薦書刊, 另開新視窗." target="_blank">推薦書刊</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="np?ctNode=287&mp=1&idPath=290_287" title="網路資源">網路資源</a>
+							<ul>
+								<li>
+									<a href="lp?ctNode=441&mp=1&idPath=290_287_441" title="圖書館連結">圖書館連結</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=442&mp=1&idPath=290_287_442" title="升學與就業資訊">升學與就業資訊</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=447&mp=1&idPath=290_287_447" title="留學與遊學資訊">留學與遊學資訊</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=448&mp=1&idPath=290_287_448" title="參考工具資源">參考工具資源</a>
+								</li>
+								<li>
+									<a href="http://ndltd.ncl.edu.tw/" title="博碩士資源, 另開新視窗." target="_blank">博碩士資源</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="np?ctNode=295&mp=1&idPath=290_295" title="圖書館導覽">圖書館導覽</a>
+							<ul>
+								<li>
+									<a href="lp?ctNode=433&mp=1&idPath=290_295_433" title="圖書館簡介">圖書館簡介</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=827&mp=1&idPath=290_295_827" title="圖書館影片">圖書館影片</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=434&mp=1&idPath=290_295_434" title="圖資委員會會議記錄">圖資委員會會議記錄</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=435&mp=1&idPath=290_295_435" title="規則與辦法">規則與辦法</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=443&mp=1&idPath=290_295_443" title="各式表單下載">各式表單下載</a>
+								</li>
+								<li>
+									<a href="np?ctNode=436&mp=1&idPath=290_295_436" title="樓層簡介">樓層簡介</a>
+								</li>
+								<li>
+									<a href="np?ctNode=856&mp=1&idPath=290_295_856" title="圖書館配置圖">圖書館配置圖</a>
+								</li>
+								<li>
+									<a href="http://w3.ocu.edu.tw/lib/memberslib.htm" title="組織成員, 另開新視窗." target="_blank">組織成員</a>
+								</li>
+								<li>
+									<a href="sp?xdUrl=/wSite/ApBlock/GoogleCalendar.jsp&ctNode=438&mp=1" title="開放時間, 另開新視窗." target="_blank">開放時間</a>
+								</li>
+								<li>
+									<a href="np?ctNode=840&mp=1&idPath=290_295_840" title="內控作業流程">內控作業流程</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="np?ctNode=775&mp=1&idPath=290_775" title="學報出版">學報出版</a>
+							<ul>
+								<li>
+									<a href="np?ctNode=776&mp=1&idPath=290_775_776" title="徵稿消息">徵稿消息</a>
+								</li>
+								<li>
+									<a href="np?ctNode=777&mp=1&idPath=290_775_777" title="學報法規">學報法規</a>
+								</li>
+								<li>
+									<a href="np?ctNode=778&mp=1&idPath=290_775_778" title="表格">表格</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=779&mp=1&idPath=290_775_779" title="會議記錄">會議記錄</a>
+								</li>
+								<li>
+									<a href="np?ctNode=782&mp=1&idPath=290_775_782" title="各期目錄">各期目錄</a>
+								</li>
+								<li>
+									<a href="np?ctNode=781&mp=1&idPath=290_775_781" title="聯絡我們">聯絡我們</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="np?ctNode=843&mp=1&idPath=290_843" title="智財權">智財權</a>
+							<ul>
+								<li>
+									<a href="np?ctNode=844&mp=1&idPath=290_843_844" title="公告及宣導">公告及宣導</a>
+								</li>
+								<li>
+									<a href="np?ctNode=845&mp=1&idPath=290_843_845" title="智慧財產權">智慧財產權</a>
+								</li>
+								<li>
+									<a href="np?ctNode=846&mp=1&idPath=290_843_846" title="專利法">專利法</a>
+								</li>
+								<li>
+									<a href="np?ctNode=847&mp=1&idPath=290_843_847" title="商標法">商標法</a>
+								</li>
+								<li>
+									<a href="np?ctNode=848&mp=1&idPath=290_843_848" title="著作權法">著作權法</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=849&mp=1&idPath=290_843_849" title="文章宣導">文章宣導</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=850&mp=1&idPath=290_843_850" title="相關案例">相關案例</a>
+								</li>
+								<li>
+									<a href="lp?ctNode=853&mp=1&idPath=290_843_853" title="智財網站連結">智財網站連結</a>
+								</li>
+								<li>
+									<a href="np?ctNode=852&mp=1&idPath=290_843_852" title="智財 Q&A">智財 Q&A</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<noscript>TAB標籤功能，如不執行不影響您資料瀏覽</noscript>
+			</div>
+		</header>
+		<div id="center" class="main innerpage">
+			<a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+			<section class="col-12 full main_image">
+				<div class="container"></div>
+			</section>
+			<div class="container">
+				<div class="function_nav">
+					<div class="function">
+						<ul>
+							<li>
+								<a href="javascript:history.back();" class="back" title="回上一頁">回上一頁</a>
+								<noscript>當script無法執行時可按"alt + &larr;"鍵替代</noscript>
+							</li>
+						</ul>
+					</div>
+				</div>
+<!-- <div class="path">
+<span class="before">現在位置</span>：<a href="mp?mp=1" title="首頁">首頁</a>
+			>
+			<a href="sitemap?mp=1" title="網站導覽">網站導覽</a>
+		</div> -->
+		<!-- breadcrumb路徑 -->
+		<div class="breadcrumb">
+			<ul>
+				<li><a href="#">首頁</a></li>
+				<li>網站導覽</li>
+			</ul>
+		</div>
+
+
+
+
+
+
+		<!--bannerSlider star-->
+		<section class="manual2 wow fadeInUp" data-wow-delay=".3s">
+			<div class="container">
+				<div class="bannerSlider">
+
+					<div class="img-container">
+						<a href="http://oculib.blogspot.com/2022/01/2022.html" title="【2022年新書展】冬日靜好，從「新」開卷，迎新年(另開新視窗)" target='_blank'>
+							<img data-lazy="https://lib.ocu.edu.tw/wSite/public/Data/f1641878799632.jpg" class="fill" alt="【2022年新書展】冬日靜好，從「新」開卷，迎新年(另開新視窗)" class="fill">
+						</a>
+					</div>
+
+					<div class="img-container">
+						<a href="http://w3.ocu.edu.tw/lib/oculib-userguide.htm" title="圖書館使用手冊線上版(另開新視窗)" target='_blank'>
+							<img data-lazy="https://lib.ocu.edu.tw/wSite/public/Data/2012-09-06-B-reading-jpg-ok.jpg" class="fill" alt="圖書館使用手冊線上版(另開新視窗)" class="fill">
+						</a>
+					</div>
+
+					<div class="img-container">
+						<a href="http://192.192.125.29/ocuerm/index.jsp" title="圖書館數位認證課程~有證照，不怕沒人罩(另開新視窗)" target='_blank'>
+							<img data-lazy="https://lib.ocu.edu.tw/wSite/public/Data/e-Class-1010917-ok.jpg" class="fill" alt="圖書館數位認證課程~有證照，不怕沒人罩(另開新視窗)" class="fill">
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--bannerSlider End-->
+		<section class="col2block">
+
+
+
+
+
+
+			<!--NodeForCP star-->
+
+
+			<!--NodeForCP End-->
+			<div class="sitemap" xmlns:lastModified="1620028026181">
+				<h2>
+					<span>網站導覽</span>
+				</h2>
+				<p>  
+					本網站依無障礙網頁設計原則建置，網站的主要內容分為四大區塊：<br>
+					1. 上方功能區塊、2. 中央內容區塊、3.下方功能區塊。
+				</p>
+				<p>本網站的快速鍵﹝Accesskey﹞設定如下：</p>
+				<ul class="keyList">
+					<li>Alt+U：上方功能區塊，包括網站導覽、回首頁、全站檢索、讀者登入。</li>
+					<li>Alt+C：中央內容區塊，為本頁主要內容區。</li>
+					<li>Alt+Z：下方功能區塊。</li>
+				</ul>
+				<p>
+					※當本網站項目頁籤無法以滑鼠點選時，您可利用以下鍵盤操作方式瀏覽資料
+					<ul>
+						<li>&larr; &rarr; or &uarr;&darr;：按左右鍵或上下鍵移動標籤順序。</li>
+						<li>Home or End&rarr;：可直接跳至標籤第一項或者最後一項。 </li>
+						<li>Tab：停留於該標籤後,可利用Tab鍵跳至內容瀏覽該筆資料，遇到radio按鈕時請配合使&larr; &rarr; or&uarr;&darr;鍵移動項目順序。 </li>
+						<li>Tab + Shift：按Tab + Shift可往回跳至上一筆資料；當跳回至標籤項目時您可繼續利用&larr; &rarr; or&uarr;&darr;鍵移動標籤順序。</li>
+					</ul>
+				</p>
+				<div class="cascading">
+					<ul class="mapTree">
+						<li>
+							<a href="np?ctNode=290&mp=1" title="1.&nbsp;網站目錄">1.&nbsp;
+							網站目錄</a>
+							<ul>
+								<li>
+									<a href="np?ctNode=283&mp=1" title="1.1&nbsp;館藏查詢">1.1&nbsp;
+									館藏查詢</a>
+									<ul>
+										<li>
+											<a href="https://libwebpac.ocu.edu.tw/webpacIndex.jsp?ctNode=296" title="1.1.1&nbsp;館藏查詢">1.1.1&nbsp;
+											館藏查詢</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=297&mp=1" title="1.1.2&nbsp;期刊清單">1.1.2&nbsp;
+											期刊清單</a>
+										</li>
+										<li>
+											<a href="sp?xdUrl=/wSite/ApBlock/LoginEBOOK.jsp&mp=1&ctNode=298" title="1.1.3&nbsp;電子書">1.1.3&nbsp;
+											電子書</a>
+										</li>
+										<li>
+											<a href="sp?xdUrl=/wSite/ApBlock/LoginJournal.jsp&mp=1&ctNode=299" title="1.1.4&nbsp;電子期刊">1.1.4&nbsp;
+											電子期刊</a>
+										</li>
+										<li>
+											<a href="https://cloud.ncl.edu.tw/ocu/?ctNode=828" title="1.1.5&nbsp;論文數位典藏系統">1.1.5&nbsp;
+											論文數位典藏系統</a>
+										</li>
+										<li>
+											<a href="http://203.72.145.196/?ctNode=836" title="1.1.6&nbsp;多媒體影音管理系統(限校內觀看)">1.1.6&nbsp;
+											多媒體影音管理系統(限校內觀看)</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="sp?xdUrl=/wSite/ApBlock/LoginERM.jsp&mp=1&ctNode=817" title="1.2&nbsp;資料庫檢索">1.2&nbsp;
+									資料庫檢索</a>
+								</li>
+								<li>
+									<a href="np?ctNode=285&mp=1" title="1.3&nbsp;館際合作">1.3&nbsp;
+									館際合作</a>
+									<ul>
+										<li>
+											<a href="np?ctNode=754&mp=1" title="1.3.1&nbsp;中區技職校院「圖書代借代還」館際合作">1.3.1&nbsp;
+											中區技職校院「圖書代借代還」館際合作</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=826&mp=1" title="1.3.2&nbsp;中部大學圖書館聯盟">1.3.2&nbsp;
+											中部大學圖書館聯盟</a>
+										</li>
+										<li>
+											<a href="np?ctNode=454&mp=1" title="1.3.3&nbsp;館際合作說明">1.3.3&nbsp;
+											館際合作說明</a>
+										</li>
+										<li>
+											<a href="np?ctNode=460&mp=1" title="1.3.4&nbsp;全國文獻傳遞服務">1.3.4&nbsp;
+											全國文獻傳遞服務</a>
+											<ul>
+												<li>
+													<a href="https://ndds.stpi.narl.org.tw/common/apply_user_account/prepare_user.do ?ctNode=455" title="1.3.4.1&nbsp;申請帳號">1.3.4.1&nbsp;
+													申請帳號</a>
+												</li>
+												<li>
+													<a href="http://ndds.stpi.narl.org.tw/?ctNode=457" title="1.3.4.2&nbsp;線上申請館際合作">1.3.4.2&nbsp;
+													線上申請館際合作</a>
+												</li>
+												<li>
+													<a href="np?ctNode=462&mp=1" title="1.3.4.3&nbsp;館際合作流程圖">1.3.4.3&nbsp;
+													館際合作流程圖</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=463&mp=1" title="1.3.4.4&nbsp;館際合作Q&A">1.3.4.4&nbsp;
+													館際合作Q&A</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="lp?ctNode=458&mp=1" title="1.3.5&nbsp;中部技專校際聯盟">1.3.5&nbsp;
+											中部技專校際聯盟</a>
+										</li>
+										<li>
+											<a href="http://sticnet.stpi.narl.org.tw/unicatc/ttswebx?@0:0:1:unicatq&ctNode=461" title="1.3.6&nbsp;全國期刊聯合目錄">1.3.6&nbsp;
+											全國期刊聯合目錄</a>
+										</li>
+										<li>
+											<a href="https://unicat.stpi.narl.org.tw/unicat2c/unicat2tp?@@0.23524816255912206&ctNode=464" title="1.3.7&nbsp;電子期刊聯合目錄">1.3.7&nbsp;
+											電子期刊聯合目錄</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="np?ctNode=286&mp=1" title="1.4&nbsp;讀者服務">1.4&nbsp;
+									讀者服務</a>
+									<ul>
+										<li>
+											<a href="MemberManager/hylibForward.jsp?rdurl=personalization/personal.jsp&mp=1&ctNode=329" title="1.4.1&nbsp;個人資料查詢及借閱">1.4.1&nbsp;
+											個人資料查詢及借閱</a>
+										</li>
+										<li>
+											<a href="np?ctNode=328&mp=1" title="1.4.2&nbsp;圖書館利用指引">1.4.2&nbsp;
+											圖書館利用指引</a>
+										</li>
+										<li>
+											<a href="http://203.72.145.166/indexRecommand.do?ctNode=336" title="1.4.3&nbsp;推薦書刊">1.4.3&nbsp;
+											推薦書刊</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="np?ctNode=287&mp=1" title="1.5&nbsp;網路資源">1.5&nbsp;
+									網路資源</a>
+									<ul>
+										<li>
+											<a href="lp?ctNode=441&mp=1" title="1.5.1&nbsp;圖書館連結">1.5.1&nbsp;
+											圖書館連結</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=442&mp=1" title="1.5.2&nbsp;升學與就業資訊">1.5.2&nbsp;
+											升學與就業資訊</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=447&mp=1" title="1.5.3&nbsp;留學與遊學資訊">1.5.3&nbsp;
+											留學與遊學資訊</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=448&mp=1" title="1.5.4&nbsp;參考工具資源">1.5.4&nbsp;
+											參考工具資源</a>
+										</li>
+										<li>
+											<a href="http://ndltd.ncl.edu.tw/?ctNode=449" title="1.5.5&nbsp;博碩士資源">1.5.5&nbsp;
+											博碩士資源</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="np?ctNode=295&mp=1" title="1.6&nbsp;圖書館導覽">1.6&nbsp;
+									圖書館導覽</a>
+									<ul>
+										<li>
+											<a href="lp?ctNode=433&mp=1" title="1.6.1&nbsp;圖書館簡介">1.6.1&nbsp;
+											圖書館簡介</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=827&mp=1" title="1.6.2&nbsp;圖書館影片">1.6.2&nbsp;
+											圖書館影片</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=434&mp=1" title="1.6.3&nbsp;圖資委員會會議記錄">1.6.3&nbsp;
+											圖資委員會會議記錄</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=435&mp=1" title="1.6.4&nbsp;規則與辦法">1.6.4&nbsp;
+											規則與辦法</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=443&mp=1" title="1.6.5&nbsp;各式表單下載">1.6.5&nbsp;
+											各式表單下載</a>
+										</li>
+										<li>
+											<a href="np?ctNode=436&mp=1" title="1.6.6&nbsp;樓層簡介">1.6.6&nbsp;
+											樓層簡介</a>
+										</li>
+										<li>
+											<a href="np?ctNode=856&mp=1" title="1.6.7&nbsp;圖書館配置圖">1.6.7&nbsp;
+											圖書館配置圖</a>
+										</li>
+										<li>
+											<a href="http://w3.ocu.edu.tw/lib/memberslib.htm?ctNode=731" title="1.6.8&nbsp;組織成員">1.6.8&nbsp;
+											組織成員</a>
+										</li>
+										<li>
+											<a href="sp?xdUrl=/wSite/ApBlock/GoogleCalendar.jsp&mp=1&ctNode=438" title="1.6.9&nbsp;開放時間">1.6.9&nbsp;
+											開放時間</a>
+										</li>
+										<li>
+											<a href="np?ctNode=840&mp=1" title="1.6.10&nbsp;內控作業流程">1.6.10&nbsp;
+											內控作業流程</a>
+											<ul>
+												<li>
+													<a href="lp?ctNode=841&mp=1" title="1.6.10.1&nbsp;採錄編目組">1.6.10.1&nbsp;
+													採錄編目組</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=842&mp=1" title="1.6.10.2&nbsp;諮詢服務組">1.6.10.2&nbsp;
+													諮詢服務組</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="np?ctNode=775&mp=1" title="1.7&nbsp;學報出版">1.7&nbsp;
+									學報出版</a>
+									<ul>
+										<li>
+											<a href="np?ctNode=776&mp=1" title="1.7.1&nbsp;徵稿消息">1.7.1&nbsp;
+											徵稿消息</a>
+										</li>
+										<li>
+											<a href="np?ctNode=777&mp=1" title="1.7.2&nbsp;學報法規">1.7.2&nbsp;
+											學報法規</a>
+										</li>
+										<li>
+											<a href="np?ctNode=778&mp=1" title="1.7.3&nbsp;表格">1.7.3&nbsp;
+											表格</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=779&mp=1" title="1.7.4&nbsp;會議記錄">1.7.4&nbsp;
+											會議記錄</a>
+										</li>
+										<li>
+											<a href="np?ctNode=782&mp=1" title="1.7.5&nbsp;各期目錄">1.7.5&nbsp;
+											各期目錄</a>
+											<ul>
+												<li>
+													<a href="lp?ctNode=783&mp=1" title="1.7.5.1&nbsp;第一期(創刊號)">1.7.5.1&nbsp;
+													第一期(創刊號)</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=784&mp=1" title="1.7.5.2&nbsp;第二期">1.7.5.2&nbsp;
+													第二期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=785&mp=1" title="1.7.5.3&nbsp;第三期">1.7.5.3&nbsp;
+													第三期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=786&mp=1" title="1.7.5.4&nbsp;第四期">1.7.5.4&nbsp;
+													第四期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=787&mp=1" title="1.7.5.5&nbsp;第五期">1.7.5.5&nbsp;
+													第五期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=788&mp=1" title="1.7.5.6&nbsp;第六期">1.7.5.6&nbsp;
+													第六期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=789&mp=1" title="1.7.5.7&nbsp;第七期">1.7.5.7&nbsp;
+													第七期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=790&mp=1" title="1.7.5.8&nbsp;第八期">1.7.5.8&nbsp;
+													第八期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=791&mp=1" title="1.7.5.9&nbsp;第九期">1.7.5.9&nbsp;
+													第九期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=792&mp=1" title="1.7.5.10&nbsp;第十期">1.7.5.10&nbsp;
+													第十期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=793&mp=1" title="1.7.5.11&nbsp;第十一期">1.7.5.11&nbsp;
+													第十一期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=794&mp=1" title="1.7.5.12&nbsp;第十二期">1.7.5.12&nbsp;
+													第十二期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=795&mp=1" title="1.7.5.13&nbsp;第十三期">1.7.5.13&nbsp;
+													第十三期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=796&mp=1" title="1.7.5.14&nbsp;第十四期">1.7.5.14&nbsp;
+													第十四期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=797&mp=1" title="1.7.5.15&nbsp;第十五期">1.7.5.15&nbsp;
+													第十五期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=798&mp=1" title="1.7.5.16&nbsp;第十六期">1.7.5.16&nbsp;
+													第十六期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=799&mp=1" title="1.7.5.17&nbsp;第十七期">1.7.5.17&nbsp;
+													第十七期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=800&mp=1" title="1.7.5.18&nbsp;第十八期">1.7.5.18&nbsp;
+													第十八期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=801&mp=1" title="1.7.5.19&nbsp;第十九期">1.7.5.19&nbsp;
+													第十九期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=802&mp=1" title="1.7.5.20&nbsp;第二十期">1.7.5.20&nbsp;
+													第二十期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=803&mp=1" title="1.7.5.21&nbsp;第二十一期">1.7.5.21&nbsp;
+													第二十一期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=804&mp=1" title="1.7.5.22&nbsp;第二十二期">1.7.5.22&nbsp;
+													第二十二期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=805&mp=1" title="1.7.5.23&nbsp;第二十三期">1.7.5.23&nbsp;
+													第二十三期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=806&mp=1" title="1.7.5.24&nbsp;第二十四期">1.7.5.24&nbsp;
+													第二十四期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=807&mp=1" title="1.7.5.25&nbsp;第二十五期">1.7.5.25&nbsp;
+													第二十五期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=808&mp=1" title="1.7.5.26&nbsp;第二十六期">1.7.5.26&nbsp;
+													第二十六期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=809&mp=1" title="1.7.5.27&nbsp;第二十七期">1.7.5.27&nbsp;
+													第二十七期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=810&mp=1" title="1.7.5.28&nbsp;第二十八期">1.7.5.28&nbsp;
+													第二十八期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=811&mp=1" title="1.7.5.29&nbsp;第二十九期">1.7.5.29&nbsp;
+													第二十九期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=812&mp=1" title="1.7.5.30&nbsp;第三十期">1.7.5.30&nbsp;
+													第三十期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=813&mp=1" title="1.7.5.31&nbsp;第三十一期">1.7.5.31&nbsp;
+													第三十一期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=814&mp=1" title="1.7.5.32&nbsp;第三十二期">1.7.5.32&nbsp;
+													第三十二期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=815&mp=1" title="1.7.5.33&nbsp;第三十三期">1.7.5.33&nbsp;
+													第三十三期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=816&mp=1" title="1.7.5.34&nbsp;第三十四期">1.7.5.34&nbsp;
+													第三十四期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=824&mp=1" title="1.7.5.35&nbsp;第三十五期">1.7.5.35&nbsp;
+													第三十五期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=825&mp=1" title="1.7.5.36&nbsp;第三十六期">1.7.5.36&nbsp;
+													第三十六期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=829&mp=1" title="1.7.5.37&nbsp;第三十七期">1.7.5.37&nbsp;
+													第三十七期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=831&mp=1" title="1.7.5.38&nbsp;第三十八期">1.7.5.38&nbsp;
+													第三十八期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=833&mp=1" title="1.7.5.39&nbsp;第三十九期">1.7.5.39&nbsp;
+													第三十九期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=835&mp=1" title="1.7.5.40&nbsp;第四十期">1.7.5.40&nbsp;
+													第四十期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=837&mp=1" title="1.7.5.41&nbsp;第四十一期">1.7.5.41&nbsp;
+													第四十一期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=838&mp=1" title="1.7.5.42&nbsp;第四十二期">1.7.5.42&nbsp;
+													第四十二期</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=839&mp=1" title="1.7.5.43&nbsp;第四十三期">1.7.5.43&nbsp;
+													第四十三期</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="np?ctNode=781&mp=1" title="1.7.6&nbsp;聯絡我們">1.7.6&nbsp;
+											聯絡我們</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="np?ctNode=843&mp=1" title="1.8&nbsp;智財權">1.8&nbsp;
+									智財權</a>
+									<ul>
+										<li>
+											<a href="np?ctNode=844&mp=1" title="1.8.1&nbsp;公告及宣導">1.8.1&nbsp;
+											公告及宣導</a>
+										</li>
+										<li>
+											<a href="np?ctNode=845&mp=1" title="1.8.2&nbsp;智慧財產權">1.8.2&nbsp;
+											智慧財產權</a>
+										</li>
+										<li>
+											<a href="np?ctNode=846&mp=1" title="1.8.3&nbsp;專利法">1.8.3&nbsp;
+											專利法</a>
+										</li>
+										<li>
+											<a href="np?ctNode=847&mp=1" title="1.8.4&nbsp;商標法">1.8.4&nbsp;
+											商標法</a>
+										</li>
+										<li>
+											<a href="np?ctNode=848&mp=1" title="1.8.5&nbsp;著作權法">1.8.5&nbsp;
+											著作權法</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=849&mp=1" title="1.8.6&nbsp;文章宣導">1.8.6&nbsp;
+											文章宣導</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=850&mp=1" title="1.8.7&nbsp;相關案例">1.8.7&nbsp;
+											相關案例</a>
+										</li>
+										<li>
+											<a href="lp?ctNode=853&mp=1" title="1.8.8&nbsp;智財網站連結">1.8.8&nbsp;
+											智財網站連結</a>
+										</li>
+										<li>
+											<a href="np?ctNode=852&mp=1" title="1.8.9&nbsp;智財 Q&A">1.8.9&nbsp;
+											智財 Q&A</a>
+											<ul>
+												<li>
+													<a href="lp?ctNode=854&mp=1" title="1.8.9.1&nbsp;智財 Q&A_校園篇">1.8.9.1&nbsp;
+													智財 Q&A_校園篇</a>
+												</li>
+												<li>
+													<a href="lp?ctNode=855&mp=1" title="1.8.9.2&nbsp;智財 Q&A_網路篇">1.8.9.2&nbsp;
+													智財 Q&A_網路篇</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="lp?ctNode=316&mp=1" title="2.&nbsp;上方功能列">2.&nbsp;
+							上方功能列</a>
+						</li>
+						<li>
+							<a href="lp?ctNode=317&mp=1" title="3.&nbsp;最新消息">3.&nbsp;
+							最新消息</a>
+						</li>
+						<li>
+							<a href="lp?ctNode=472&mp=1" title="4.&nbsp;活動回顧">4.&nbsp;
+							活動回顧</a>
+						</li>
+						<li>
+							<a href="lp?ctNode=730&mp=1" title="5.&nbsp;首頁輪播">5.&nbsp;
+							首頁輪播</a>
+						</li>
+						<li>
+							<a href="lp?ctNode=471&mp=1" title="6.&nbsp;條列說明文字">6.&nbsp;
+							條列說明文字</a>
+						</li>
+						<li>
+							<a href="np?ctNode=830&mp=1" title="7.&nbsp;圖書館小摩課">7.&nbsp;
+							圖書館小摩課</a>
+						</li>
+						<li>
+							<a href="lp?ctNode=481&mp=1" title="8.&nbsp;文章圖片">8.&nbsp;
+							文章圖片</a>
+						</li>
+						<li>
+							<a href="np?ctNode=866&mp=1" title="9.&nbsp;More更多資源">9.&nbsp;
+							More更多資源</a>
+						</li>
+						<li>
+							<a href="lp?ctNode=722&mp=1" title="10.&nbsp;文件手冊">10.&nbsp;
+							文件手冊</a>
+						</li>
+					</ul>
+				</div>
+			</div></section></div>
+		</div>
+
+
+
+
+
+
+
+		<!-- footer Start-->
+		<footer>
+			<div class="container">
+				<a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="下方功能區塊">:::</a>
+				<div class="footer_info">
+					<p class="Copyright">
+				<!-- span class="timeinfo">本日開館(8:10-21:30)</span><br>
+					<span class="timeinfo">臨時閱覽證可用張數:25 (目前防疫期間，不開放校外人士入館。)</span><br -->
+					僑光科技大學圖書館版權所有 | COPYRIGHT © 2021 OCU. ALL RIGHTS RESERVED<br>
+					電話：04-27016855 ext. 8110 | 臺中市407西屯區僑光路100號<br> <span
+					class="update">更新日期：<em>2022/03/01</em></span>
+
+					<span class="counter">瀏覽人次 : <em>1092381</em></span>
+				</p>
+				<div class="footer_icon">
+					<ul>
+						<li><a target="_blank" href="javascript:;" title="另開視窗"> <img
+							src="images/aa.png" alt="facebook">
+						</a></li>
+						<li><a target="_blank" href="javascript:;" title="另開視窗"> <img
+							src="images/qrcode.png" alt="instagram">
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer End -->
+
+	<a href="javascript:;" class="scrollToTop">回頁首</a>
+	<!-- JQ -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<!-- 外掛 plugin js -->
+	<script src="vendor/jquery.easing.min.js"></script>
+	<!-- ease -->
+	<script src="vendor/slick/slick.min.js "></script>
+	<!-- slick -->
+	<script src="vendor/slick/slick-lightbox.js "></script>
+	<!-- slick lightbox -->
+	<script src="vendor/lazyload/lazyload.js"></script>
+	<!-- lazyload -->
+	<script src="vendor/picturefill/picturefill.min.js" async></script>
+	<!-- picturefill -->
+	<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+	<!-- scrolltable -->
+	<!-- pg_calendar -->
+	<script src="vendor/pg_calendar/js/pignose.calendar.full.js"></script>
+	<!-- hyUI -->
+	<script src="js/hyui.js"></script>
+	<!-- 客製js -->
+	<script src="js/customize.js"></script>
+	<script src="vendor/animate/wow.min.js "></script>
+	<script>
+		wow = new WOW({
+			animateClass : 'animated',
+			mobile : false,
+			offset : 100,
+			callback : function(box) {
+				console.log("WOW: animating < " + box.tagName.toLowerCase() + ">")
+			}
+		});
+		wow.init();
+	</script>
+	<script>
+		$(function() {
+			$('.calendar').pignoseCalendar(
+			{
+				lang : 'ch',
+				disabledDates : [ '2021-08-02', '2021-08-09', '2021-08-16',
+				'2021-08-23', '2021-08-30' ]
+			});
+		});
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210185250-4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-210185250-4');
+	</script></div>
+	<script type="text/javascript"></script>
+	<noscript>TAB標籤效果，如不執行不影響您資料瀏覽</noscript>
+</body>
+</html>
