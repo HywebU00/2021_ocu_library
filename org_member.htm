@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>僑光科技大學圖書館</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+        <!-- slick css-->
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+        <!-- fancybox css -->
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+        <!-- hyUI css -->
+        <link rel="stylesheet" href="css/hyui.css">
+        <!-- favicon -->
+        <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    </head>
+
+    <body>
+        <!-- 直接跳主內容區 -->
+        <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+        <!-- wrapper Start -->
+        <div class="wrapper">
+            <!-- header Start -->
+            <header class="header">
+                <div class="container">
+                    <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                    <!-- navigation Start -->
+                    <nav class="navigation" role="navigation" aria-label="Site">
+                        <!-- 新增div navlist -->
+                        <div class="navlist">
+                            <ul>
+                                <li><a href="#">意見交流</a></li>
+                                <li><a href="#">網站導覽</a></li>
+                                <li><a href="https://www.ocu.edu.tw/" target="_blank">僑光首頁</a></li>
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- 讀者專區 樣式一 -->
+                        <!-- 未登入狀態的登入btn -->
+                        <div class="nav_reader">
+                            <!-- <button class="reader_btn-1" style="display: none;">讀者登入</button> -->
+                            <button class="reader_btn-1">讀者登入</button>
+                            <!--未登入狀態區塊-->
+                            <div class="nav_readerArea-1" style="display: none;">
+                                <button type="button" class="close">關閉</button>
+                                <div class="form_grp">
+                                    <label for="username">帳號：</label>
+                                    <input name="username" type="text" placeholder="請輸入帳號">
+                                </div>
+                                <div class="form_grp">
+                                    <label for="password">密碼：</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="check_grp">
+                                    <label><input type="checkbox">記住帳號</label>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="loginout">登入</button>
+                                </div>
+                            </div>
+                            <!-- 已登入狀態顯示讀者姓名 -->
+                            <button class="reader_btn-2" style="display: none;">張家祥</button>
+                            <!--讀者已登入狀態區塊-->
+                            <div class="nav_readerArea-2" style="display:none">
+                                <button type="button" class="close">關閉</button>
+                                <div class="reader_infolist">
+                                    <p>歡迎，<span class="reader_name">張家祥</span></p>
+                                    <ul>
+                                        <li>借閱中<span>10</span></li>
+                                        <li class="important">逾期未歸<span>1</span></li>
+                                        <li class="important">違規天數<span>1</span></li>
+                                        <li>預約<span>5</span></li>
+                                        <li class="important">已到館<span>2</span></li>
+                                    </ul>
+                                </div>
+                                <div class="btn_grp">
+                                    <button class="my_study">個人書房</button>
+                                    <button class="loginout">登出</button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- navigation End -->
+                    <h1>
+                        <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                    </h1>
+                    <!-- noscript -->
+                    <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                    </noscript>
+                    <!-- menu Start -->
+                    <nav class="menu" role="navigation" aria-label="About page">
+                        <ul>
+                            <li><a href="np.htm">館藏查詢</a>
+                                <ul>
+                                    <li><a href="#">館藏查詢</a></li>
+                                    <li><a href="#">期刊清單</a></li>
+                                    <li><a href="#">電子書</a></li>
+                                    <li><a href="#">電子期刊</a></li>
+                                    <li><a href="#">論文數位典藏系統</a></li>
+                                    <li><a href="#">多媒體影音管理系統(此系統限校內使用)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://liberm.ocu.edu.tw/ocuerm/index.jsp" target="_blank">資料庫檢索</a></li>
+                            <li><a href="#">館際合作</a>
+                                <ul>
+                                    <li><a href="#">中區技職校院「圖書代借代還」館際合作</a></li>
+                                    <li><a href="#">中部大學圖書館聯盟</a></li>
+                                    <li><a href="#">館際合作說明</a></li>
+                                    <li><a href="#">全國文獻傳遞服務</a></li>
+                                    <li><a href="#">中部技專校際聯盟</a></li>
+                                    <li><a href="#">全國期刊聯合目錄</a></li>
+                                    <li><a href="#">電子期刊聯合目錄</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">讀者服務</a>
+                                <ul>
+                                    <li><a href="#">個人資料查詢及借閱</a></li>
+                                    <li><a href="#">圖書館利用指引</a></li>
+                                    <li><a href="#">推薦書刊</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">圖書館導覽</a>
+                                <ul>
+                                    <li><a href="#">圖書館簡介</a></li>
+                                    <li><a href="#">圖書館影片</a></li>
+                                    <li><a href="#">圖資委員會會議記錄</a></li>
+                                    <li><a href="#">規則與辦法</a></li>
+                                    <li><a href="#">各式表單下載</a></li>
+                                    <li><a href="#">樓層簡介</a></li>
+                                    <li><a href="#">圖書館配置圖</a></li>
+                                    <li><a href="#">組織成員</a></li>
+                                    <li><a href="#">開放時間</a></li>
+                                    <li><a href="#">內控作業流程</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">學報出版</a>
+                                <ul>
+                                    <li><a href="#">徵稿消息</a></li>
+                                    <li><a href="#">學報法規</a></li>
+                                    <li><a href="#">表格</a></li>
+                                    <li><a href="#">會議記錄</a></li>
+                                    <li><a href="#">各期目錄</a></li>
+                                    <li><a href="#">聯絡我們</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">智財權</a></li>
+                        </ul>
+                    </nav>
+                    <!-- menu End -->
+
+                    <!-- Search Start -->
+                    <!-- 館藏查詢 樣式一 -->
+                    <div class="search" role="search">
+                        <div class="form_grp">
+                            <select name="" id="selectSample">
+                                <option value="" aria-labelledby="館藏查詢">館藏目錄</option>
+                                <option value="" aria-labelledby="選項二">電子資源</option>
+                            </select>
+                            <label for="mustSameAsId">搜尋</label>
+                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容">
+                            <button type="button" class="btn btn-search">查詢</button>
+                        </div>
+                    </div>
+                    <!-- Search End -->
+
+                </div>
+            </header>
+            <!-- header End -->
+            <!-- main Start -->
+            <div id="center" class="main innerpage">
+                <!-- 內頁新增一個classname-->
+                <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+                <div class="container">
+                    <!--bannerSlider star-->
+                    <div class="bannerSlider wow fadeInUp">
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/banner01.jpg" class="fill" alt="圖片說明1">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/banner_b01.jpg" class="fill" alt="圖片說明2">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/banner_b02.jpg" class="fill" alt="圖片說明3">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/banner_b03.jpg" class="fill" alt="圖片說明3">
+                            </a>
+                        </div>
+                    </div>
+                    <!--bannerSlider End-->
+                    <!-- col2block star -->
+                    <section class="col2block">
+                        <div class="left_block">
+                            <h2>圖書館</h2>
+                            <ul>
+                                <li><a href="#all">圖書館(全部條列)</a></li>
+                                <li><a href="#advisory">諮詢服務組</a></li>
+                                <li><a href="#cataloging">採錄編目組</a></li>
+                            </ul>
+                        </div>
+                        <!-- 主要內容區 -->
+                        <div class="center_block">
+                            <!-- breadcrumb路徑 -->
+                            <div class="breadcrumb">
+                                <ul>
+                                    <li><a href="#">首頁</a></li>
+                                    <li>組織成員</li>
+                                </ul>
+                            </div>
+                            <!-- h2節點 -->
+                            <h2 class="title">組織成員</h2>
+                            <!-- function功能區塊 -->
+                            <div class="function">
+                                <ul>
+                                    <li class="icon_back"><a href="#">回上一頁</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- LP Start -->
+                            <section class="lp">
+                                <!-- category -->
+<!--                                 <div class="category">
+                                    <ul>
+                                        <li><a href="#">圖書館(全部條列)</a></li>
+                                        <li><a href="#">諮詢服務組</a></li>
+                                        <li><a href="#">採錄編目組</a></li>
+                                    </ul>
+                                </div> -->
+
+                                <!-- org_mlist -->
+                                <div class="org_mlist" id="all">
+                                    <!-- org_mlist ul-->
+                                    <ul>
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">石櫻櫻</div>
+
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>圖書館 / 館長</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>統籌、協調及督導圖書館業務</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8102</li>
+                                                    <li><span class="title">職務代理人：</span>蔡振璋(分機8115)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>圖書館願景與策略目標之訂定。</li>
+                                                            <li>館務之策劃與實施督導。</li>
+                                                            <li>中長程發展之規劃與擬定。</li>
+                                                            <li>館藏發展之規劃與督導。</li>
+                                                            <li>重要業務之協調與仲裁。</li>
+                                                            <li>校內行政事務。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- org_mlist ul end-->
+
+                                    <h3 id="advisory">諮詢服務組</h3>
+
+                                    <!-- org_mlist ul-->
+                                    <ul>
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">蔡振璋</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>諮詢服務組 / 組長</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>綜理諮詢服務組各項業務</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8115、2185</li>
+                                                    <li><span class="title">職務代理人：</span>王仁博(分機8113)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>綜理諮詢服務組相關業務。</li>
+                                                            <li>諮詢服務組工作規劃、分配、督導及執行。</li>
+                                                            <li>綜理圖書館各項推廣活動。</li>
+                                                            <li>校內行政事務支援。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">洪欣杏</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>諮詢服務組 / 辦事員</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:ref@ocu.edu.tw">ref@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>參考資訊</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8108</li>
+                                                    <li><span class="title">職務代理人：</span>吳雅祺(分機8103)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>圖書館網頁製作與維護。</li>
+                                                            <li>館際合作推廣與服務。</li>
+                                                            <li>電子資料庫採購及推廣。</li>
+                                                            <li>參考諮詢及資訊檢索服務。</li>
+                                                            <li>圖書館自動化系統、數位化系統管理、規劃與建置維護。</li>
+                                                            <li>校內行政事務。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">徐慧鈴</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>諮詢服務組 / 書記</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>閱覽流通</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8107</li>
+                                                    <li><span class="title">職務代理人：</span>黃秋萍(分機8104)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>流通閱覽服務、入館門禁管理。</li>
+                                                            <li>中、西文書庫管理。</li>
+                                                            <li>新生圖書館導覽活動。</li>
+                                                            <li>圖書館推廣活動。</li>
+                                                            <li>學報收稿、編印。</li>
+                                                            <li>校內行政事務。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">張國煥</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>諮詢服務組 / 技士</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>視聽管理</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8105</li>
+                                                    <li><span class="title">職務代理人：</span>徐慧鈴(分機8107)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>視聽資料採購作業。</li>
+                                                            <li>多媒體區場地及空間規劃與管理。</li>
+                                                            <li>視聽器材借用、視聽設備使用諮詢服務。</li>
+                                                            <li>視聽資料之流通服務及相關推廣活動業務。</li>
+                                                            <li>校內行政事務工作。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- org_mlist ul end-->
+
+                                    <h3 id="cataloging">採錄編目組</h3>
+
+                                    <!-- org_mlist ul -->
+                                    <ul>
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">王仁博</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>採錄編目組 / 組長</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>綜理採錄編目組各項業務</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8113</li>
+                                                    <li><span class="title">職務代理人：</span>蔡振璋(分機8115、2185)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>綜理採錄編目組相關業務。</li>
+                                                            <li>採錄編目組工作規劃、分配、督導及執行。</li>
+                                                            <li>綜理圖書期刊資料徵集。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">吳雅祺</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>採錄編目組 / 書記</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>採錄編目</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8103</li>
+                                                    <li><span class="title">職務代理人：</span>洪欣杏(分機8108)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>中文、外文圖書徵集採購。</li>
+                                                            <li>電子書採購作業。</li>
+                                                            <li>圖書機讀編目、修改及轉檔作業。</li>
+                                                            <li>贈書複本查核及委外編目作業。</li>
+                                                            <li>新書到館驗收及清點。</li>
+                                                            <li>校內行政事務。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="list_picture">
+                                                <div class="img-container">
+                                                    <img src="images/people.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="list_text">
+                                                <div class="list_title">黃秋萍</div>
+                                                <ol class="ollist">
+                                                    <li><span class="title">單位 / 職稱：</span>採錄編目組 / 辦事員</li>
+                                                    <li><span class="title">E-mail：</span><a href="mailto:lib@ocu.edu.tw">lib@ocu.edu.tw</a></li>
+                                                    <li><span class="title">主要業務：</span>期刊管理</li>
+                                                    <li><span class="title">聯絡電話：</span>04-27016855 ext.8104</li>
+                                                    <li><span class="title">職務代理人：</span>徐慧鈴(分機8107)</li>
+                                                    <li><span class="title">個人執掌：</span>
+                                                        <ol class="pcontrol">
+                                                            <li>期刊上架及整架。</li>
+                                                            <li>期刊(含中文電子期刊)參考諮詢及服務。</li>
+                                                            <li>中外文期刊合訂本書庫架位管理。</li>
+                                                            <li>報紙採購及管理。</li>
+                                                            <li>校刊收稿、編印。</li>
+                                                            <li>校內行政事務。</li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <!-- org_mlist ul end-->
+                                </div>
+
+                            </section>
+                            <!-- LP End -->
+                        </div>
+                    </section>
+                    <!-- col2block end -->
+                </div>
+            </div>
+            <!-- footer Start-->
+            <footer>
+                <div class="container">
+                    <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="下方功能區塊">:::</a>
+                    <div class="footer_info">
+                        <p class="Copyright">
+                            <span class="timeinfo">本日閉館(週一~週六進一樓櫃檯開放)</span><br>
+                            僑光科技大學圖書館版權所有   |   COPYRIGHT © 2012 OCU. ALL RIGHTS RESERVED<br>
+                            電話：04-27016855 ext. 8110   |   臺中市407西屯區僑光路100號<br>
+                            <span class="update">更新日期：<em>2021/09/11</em></span>
+                            <span class="counter">瀏覽人次 : <em>10986963</em></span>
+                        </p>
+                        <div class="footer_icon">
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="javascript:;" title="另開視窗">
+                                        <img src="images/aa.png" alt="facebook">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="javascript:;" title="另開視窗">
+                                        <img src="images/qrcode.png" alt="instagram">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+            <!-- footer End -->
+        </div>
+        <a href="javascript:;" class="scrollToTop">回頁首</a>
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <!-- 外掛 plugin js -->
+        <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+        <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+        <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+        <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+        <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+        <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+        <!-- hyUI -->
+        <script src="js/hyui.js"></script>
+        <!-- 客製js -->
+        <script src="js/customize.js"></script>
+    </body>
+
+    </html>

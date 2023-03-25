@@ -151,6 +151,124 @@
             }
         }
     }
+
+    .org_mlist {
+        // color:$aHover;
+        font-weight: normal;
+        background: rgba(255, 255, 255, .9);
+        border-radius: 12px;
+        padding: .5em 1em;
+        h3{
+            background: $primaryColor;
+            color:#fff;
+            padding: .5em 1em;
+            border-radius: 5px;
+            border-left: solid 5px $importantColor;
+        }
+
+        &>ul {
+            list-style-type: none;
+            padding: 0;
+
+            &>li {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1em;
+                margin-bottom: 1em;
+                // border-bottom: 1px solid #606060;
+                position: relative; // outline: 1px solid blue;
+                background: #fff;
+                border-radius: 8px;
+
+                .tag {
+                    margin-left: 2em;
+                }
+
+                &>a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    color: #fff;
+
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+            }
+        }
+        .ollist{
+            list-style-type: none;
+            padding: 0;
+            font-size: .938rem;
+            line-height: 1.6rem;
+            margin-left: 7em;
+            li{
+                position: relative;
+                a{
+                    color:$importantColor;
+                    &:hover, &:focus{
+                        color:$primaryColor;
+                    }
+                }
+            }
+            .title{
+                min-width:7em;
+                text-align: right;
+                display: inline-block;
+                position: absolute;
+                top:0;
+                left:-7em;
+            }
+            .pcontrol{
+                margin: 0 0 0 1.5em;
+                padding: 0;
+
+
+            }
+        }
+
+        .list_picture {
+            flex-basis: calc(25% - 15px);
+            margin:.5em .5em 1em 0;
+
+            @include screen("mobile") {
+                flex-basis: 70%;
+                margin: .5em auto 1em;
+            }
+            .img-container{
+                @include aspect-ratio(3.2, 4);
+                background: rgba(0, 0, 0, 0);
+            }
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .list_text {
+            flex-basis: 72.66666%;
+
+            @include screen("mobile") {
+                flex-basis: 100%;
+            }
+            .list_title{
+                margin: .5em 0 .5em .6em;
+                font-size: 1.5em;
+                letter-spacing: .1em;
+                color:$primaryColor;
+                font-weight: bold;
+                @include screen("mobile") {
+                    margin: 0 auto .5em;
+                    text-align: center;
+                }
+            }
+
+        }
+
+
+    }
+
 }
 
 //圖文列表頁(書本)
