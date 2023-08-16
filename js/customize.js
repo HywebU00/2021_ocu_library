@@ -395,3 +395,6 @@ $(".accordionqa .accordionblock").each(function () {
 _accordionItem.click(accordion3);
 }
 });
+
+
+
